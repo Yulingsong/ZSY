@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*css 初始化 */
+*{
+    padding:0;
+    margin: 0;
+}
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.tal {
+    text-align: left
+}
+
+.tac {
+    text-align: center
+}
+
+.tar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
