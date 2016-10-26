@@ -156,6 +156,7 @@ table {
 }
 .menu a{
     display: block;
+
     float: left;
     width: 65px;
     height: 100px;
@@ -233,6 +234,7 @@ table {
     line-height: 12px;
     margin-top: 30px;
     color: #777777;
+    cursor: default;
 }
 .buttom-menu-rt{
     width: 200px;
@@ -244,6 +246,7 @@ table {
     margin-left: 5px;
 }
 .buttom-menu-rt ul a{
+    cursor: default;
     display: block;
     /*float: left;*/
     width: 200px;
