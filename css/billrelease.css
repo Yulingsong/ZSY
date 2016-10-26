@@ -258,6 +258,14 @@
 .bill-file:hover{
     background-color: #ff8871;
 }
+.getfile-suc{
+    display: none;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: orange;
+}
 .max-filenum{
     float: left;
     width: 100px;

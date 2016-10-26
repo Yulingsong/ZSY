@@ -3,17 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <title>billpublished</title>
+    <script src="../js/jquery.js"></script>
     <link rel="stylesheet" href="../css/base.css">
+
     <style type="text/css">
         .content{
             width: 1100px;
-            height: 1256px;
+            height: 720px;
             margin: 0 auto;
             margin-top: 12px;
+            margin-bottom: 50px;
             background-color: #fff;
             border: 1px solid #dddddd;
         }
+        .cl-menu{
+            width: 229px;
+            height: 720px;
+            border-right: 1px solid #dddddd;
+        }
+        .cr-main{
+            width: 870px;
+            height: 720px;
+        }
+        .cl-menu-dis{
+            width: 229px;
+            height: 90px;
+            font-size: 20px;
+            line-height: 90px;
+            background-color: #0098d7;
+            color: white;
+        }
+        .cl-menu-fun{
+            width: 229px;
+            height: 64px;
+            font-size: 16px;
+            line-height: 64px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .c-b:hover{
+            background-color: #afe6ff;
+        }
+        .cr-main-topmenu{
+            width: 834px;
+            height: 42px;
+            margin-left: 18px;
+            border-bottom: 1px solid #dddddd;
+            font-size: 20px;
+            line-height: 42px;
+            color: #ff6445;
+        }
+        .menu-l{
+            list-style:none;
+            /*background-color: orange;*/
+        }
+        .menu-l li{
+            float: left;
+            width: 75px;
+            height: 18px;
+            margin-top: 12px;
+            text-align: center;
+            line-height: 18px;
+            font-size: 16px;
+            color: #333;
+            cursor:pointer;
+            border-left: 1px solid #cccccc;
+            /*background-color: orange;*/
+        }
+        .menu-l li.sel{
+            color:#ff6445;
+        }
+        .menu-l li.sw{
+            width: 108px;
+            border: none;
+        }
+        .select-people{
+            width: 834px;
+            height: 100px;
+            margin-left: 18px;
+            margin-top: 5px;
+            /*background-color: orange;*/
+        }
+        .select-people .select-type{
+            width: 834px;
+            height: 50px;
+        }
+        .type-title{
+            float: left;
+            width: 121px;
+            height: 50px;
+            /*margin-right: ;*/
+            font-size: 16px;
+            line-height: 50px;
+            color: #666;
+        }
+
+        .select-type-menu li{
+            float: left;
+            width: 92px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 20px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 16px;
+            color: #333;
+            cursor:pointer;
+            border-radius: 5px;
+            /*background-color: orange;*/
+        }
+        .select-type-menu li.select-type-sel{
+            color: #fff;
+            background-color: #00bbee;
+        }
+        .sort{
+            width: 832px;
+            height: 30px;
+            margin-left: 18px;
+            margin-top: 17px;
+            background-color: #edf5f9;
+            border: 1px solid #d2f1ff;
+        }
+
+        .sort .sort-type{
+            width: 60px;
+            height: 30px;
+            margin-right: 40px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #666;
+        }
+        .sort .info-amount{
+            width: 200px;
+            height: 30px;
+            margin-right: 20px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #666;
+        }
+        .sort .info-amount span{
+            color: #ff6445;
+        }
+        .bill-info{
+            width: 834px;
+            height: 200px;
+            margin-left: 18px;
+            margin-top: 10px;
+            border: 1px solid #c6eaff;
+        }
+        .bill-info-top{
+            width: 834px;
+            height: 40px;
+            background-color: #c6eaff;
+        }
+        .bill-info-n{
+            width: 88px;
+            height: 40px;
+            font-size: 14px;
+            color: #666666;
+            line-height: 40px;
+        }
+        .bill-info-no{
+            width:200px;
+            height: 40px;
+            margin-left: 10px;
+            font-size: 14px;
+            color: #666;
+            line-height: 41px;
+        }
+        .expect-m{
+            width: 200px;
+            height: 40px;
+            /*background-color: orange;*/
+            margin-right: 114px;
+            font-size: 14px;
+            color: #ff5050;
+            line-height: 40px;
+        }
+        .bill-info-buttom{
+            width: 834px;
+            height: 160px;
+            /*background-color: orange;*/
+        }
+        .bill-ibl{
+            width: 180px;
+            height: 130px;
+            margin-top: 15px;
+            border-right: 1px dashed #c6eaff;
+        }
+        .bill-bank{
+            width: 160px;
+            height: 20px;
+            margin-top: 20px;
+            margin-left: 16px;
+            font-size: 14px;
+            color: #333;
+            line-height: 20px;
+            /*background-color: orange;*/
+        }
+        .bill-bank-name{
+            width: 160px;
+            height: 20px;
+            margin-top: 30px;
+            margin-left: 16px;
+            font-size: 14px;
+            color: #333;
+            line-height: 20px;
+            /*background-color: orange;*/
+        }
+        .bill-ibt{
+            width: 128px;
+            height: 130px;
+            margin-top: 15px;
+            border-right: 1px dashed #c6eaff;
+        }
+        .bill-money{
+            width: 90px;
+            height: 20px;
+            margin-top: 20px;
+            margin-left: 26px;
+            font-size: 14px;
+            color: #333;
+            line-height: 20px;
+        }
+        .bill-money-name{
+            width: 90px;
+            height: 20px;
+            margin-top: 30px;
+            margin-left: 26px;
+            font-size: 14px;
+            color: #ff5050;
+            line-height: 20px;
+        }
+        .textb{
+            color: #333333;
+        }
+        .bill-ibth{
+            width: 190px;
+            height: 130px;
+            margin-top: 15px;
+            border-right: 1px dashed #c6eaff;
+        }
+        .bill-ibf{
+            width: 330px;
+            height: 130px;
+            margin-top: 15px;
+        }
+        .bill-ibll{
+            width: 90px;
+            height: 130px;
+            background-color: orange;
+        }
+        .bill-iblc{
+            width: 100px;
+            height: 130px;
+            background-color: lightcyan;
+        }
+        .bill-iblr{
+            width: 130px;
+            height: 130px;
+            background-color: lightcoral;
+        }
+        .bill-iblr-btn{
+            
+        }
     </style>
+    <script type="text/javascript">
+        $(function () {
+            $(".menu-l li").click(function () {
+                $(this).siblings().removeClass();
+                $(this).addClass("sel");
+                document.getElementById("sw").style.width = "108px";
+                document.getElementById("sw").style.border = "none";
+            })
+        });
+        $(function () {
+            $(".select-type-menu li").click(function () {
+                $(this).siblings().removeClass();
+                $(this).addClass("select-type-sel");
+            })
+        });
+    </script>
 </head>
 <body>
 <div class="nav">
@@ -45,26 +314,114 @@
                     <a href="#">我的账号</a>
                     <a href="#">帮助中心</a>
                 </ul>
-
             </div>
         </div>
     </div>
 </div>
 
 <div class="content">
-    <!--<div class="tac fl cl-menu c-w">-->
-        <!--<div class="cl-menu-dis">-->
-            <!--<img src="">-->
-            <!--<div>我要贴现</div>-->
-        <!--</div>-->
-        <!--<div class="tac cl-menu-fun bgc-b c-w">发布票据</div>-->
-        <!--<div class="tac cl-menu-fun c-b">库存管理</div>-->
-        <!--<div class="tac cl-menu-fun c-b">已发布票据</div>-->
-        <!--<div class="tac cl-menu-fun c-b">我的交易</div>-->
-    <!--</div>-->
-    <!--<div class="fr cr-main">-->
 
-    <!--</div>-->
+    <div class="tac fl cl-menu c-w">
+        <div class="cl-menu-dis">
+            <img src="">
+            <div>我要贴现</div>
+        </div>
+        <div class="tac cl-menu-fun c-b">发布票据</div>
+        <div class="tac cl-menu-fun c-b">库存管理</div>
+        <div class="tac cl-menu-fun bgc-b  c-w">已发布票据</div>
+        <div class="tac cl-menu-fun c-b">我的交易</div>
+    </div>
+
+    <div class="fr cr-main">
+        <div class="cr-main-topmenu">
+            <ul class="menu-l">
+                <li class="sel sw" id="sw">已发布票据</li>
+                <li>待审核</li>
+                <li>竞价中</li>
+                <li>待付款</li>
+                <li>待背书</li>
+            </ul>
+        </div>
+
+        <div class="select-people">
+            <div class="select-type">
+                <div class="tac type-title">承兑人类型:</div>
+                <ul class="select-type-menu">
+                    <li class="select-type-sel">全部</li>
+                    <li>国有</li>
+                    <li>私营</li>
+                    <li>集体</li>
+                </ul>
+            </div>
+            <div class="select-type">
+                <div class="tac type-title">承兑人金额:</div>
+                <ul class="select-type-menu">
+                    <li class="select-type-sel">全部</li>
+                    <li>10万以下</li>
+                    <li>100万以下</li>
+                    <li>100万-500万</li>
+                    <li>500万以上</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sort">
+            <div class="fl tac sort-type">默认</div>
+            <div class="fl tac sort-type">金额</div>
+            <div class="fl tac sort-type">到期日</div>
+            <div class="fl tac sort-type">剩余天数</div>
+            <div class="fr tar info-amount">共<span>8888</span>条票据信息</div>
+        </div>
+
+        <div>
+            <div class="bill-info">
+                <div class="bill-info-top">
+                    <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
+                    <div class="fl tal bill-info-no">88888888888888888888888</div>
+                    <div class="fr tar expect-m">期望成交价: 100,000元</div>
+                </div>
+                <div class="bill-info-buttom">
+                    <div class="fl bill-ibl">
+                        <div class="tal bill-bank">承兑行/人</div>
+                        <div class="tal bill-bank-name">中石油股份有限公司</div>
+                    </div>
+                    <div class="fl bill-ibt">
+                        <div class="tal bill-money">承兑行/人</div>
+                        <div class="tal bill-money-name">100,000元</div>
+                    </div>
+                    <div class="fl bill-ibth">
+                        <div class="tal bill-money">票据到期日</div>
+                        <div class="tal textb bill-money-name">2017-09-08</div>
+                    </div>
+                    <div class="fl bill-ibf">
+                        <div class="fl bill-ibll">
+                            <div class="tal bill-money">承兑行/人</div>
+                            <div class="tal textb bill-money-name">4</div>
+                        </div>
+                        <div class="fl bill-iblc">
+                            <div class="tal bill-money">交易状态</div>
+                            <div class="tal bill-money-name">待审核</div>
+                        </div>
+                        <div class="fl bill-iblr">
+                            <div class="fr tac bill-iblr-btn">查看</div>
+                            <div class="fr tac bill-iblr-btn">修改</div>
+                            <div class="fr tac bill-iblr-btn">选择竞价方</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bill-info">
+                
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
 </div>
 
 

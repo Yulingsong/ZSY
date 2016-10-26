@@ -8,6 +8,15 @@
     <style type="text/css">
 
     </style>
+    <script type="text/javascript">
+        function getfile(val){
+            if(val.value){
+                document.getElementById("getfile-suc").style.display = "block";
+            }else{
+                document.getElementById("getfile-suc").style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="nav">
@@ -168,7 +177,8 @@
                 <div class="buttom-inner-row">
                     <div class="fl inner-row-title">票据正面</div>
                     <div class="fl inner-row-text">
-                        <div class="tac bill-file">上传图片<input type="file" class="uploadfile-bill"/></div>
+                        <div class="tac bill-file">上传图片<input type="file" class="uploadfile-bill" onchange="getfile(this)"/></div>
+                        <div class="getfile-suc" id="getfile-suc"></div>
                     </div>
                 </div>
                 <div class="buttom-inner-row">
@@ -184,10 +194,8 @@
                         <div class="tac row-btn">入库</div>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 </div>
 
