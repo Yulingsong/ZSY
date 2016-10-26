@@ -5,324 +5,10 @@
     <title>billpublished</title>
     <script src="../js/jquery.js"></script>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/billpublished.css">
 
     <style type="text/css">
-        .content{
-            width: 1100px;
-            height: 720px;
-            margin: 0 auto;
-            margin-top: 12px;
-            margin-bottom: 50px;
-            background-color: #fff;
-            border: 1px solid #dddddd;
-        }
-        .cl-menu{
-            width: 229px;
-            height: 720px;
-            border-right: 1px solid #dddddd;
-        }
-        .cr-main{
-            width: 870px;
-            height: 720px;
-        }
-        .cl-menu-dis{
-            width: 229px;
-            height: 90px;
-            font-size: 20px;
-            line-height: 90px;
-            background-color: #0098d7;
-            color: white;
-        }
-        .cl-menu-fun{
-            width: 229px;
-            height: 64px;
-            font-size: 16px;
-            line-height: 64px;
-            border-bottom: 1px solid #dddddd;
-        }
-        .c-b:hover{
-            background-color: #afe6ff;
-        }
-        .cr-main-topmenu{
-            width: 834px;
-            height: 42px;
-            margin-left: 18px;
-            border-bottom: 1px solid #dddddd;
-            font-size: 20px;
-            line-height: 42px;
-            color: #ff6445;
-        }
-        .menu-l{
-            list-style:none;
-            /*background-color: orange;*/
-        }
-        .menu-l li{
-            float: left;
-            width: 75px;
-            height: 18px;
-            margin-top: 12px;
-            text-align: center;
-            line-height: 18px;
-            font-size: 16px;
-            color: #333;
-            cursor:pointer;
-            border-left: 1px solid #cccccc;
-            /*background-color: orange;*/
-        }
-        .menu-l li.sel{
-            color:#ff6445;
-        }
-        .menu-l li.sw{
-            width: 108px;
-            border: none;
-        }
-        .select-people{
-            width: 834px;
-            height: 80px;
-            margin-left: 18px;
-            margin-top: 5px;
-            /*background-color: orange;*/
-        }
-        .select-people .select-type{
-            float: left;
-            width: 834px;
-            height: 40px;
-        }
-        .type-title{
-            float: left;
-            width: 121px;
-            height: 50px;
-            /*margin-right: ;*/
-            font-size: 14px;
-            line-height: 50px;
-            color: #666;
-        }
 
-        .select-type-menu li{
-            float: left;
-            width: 92px;
-            height: 30px;
-            margin-top: 10px;
-            margin-left: 5px;
-            text-align: center;
-            line-height: 30px;
-            font-size: 14px;
-            color: #333;
-            cursor:pointer;
-            border-radius: 5px;
-            /*background-color: orange;*/
-        }
-        .select-type-menu li.select-type-sel{
-            color: #fff;
-            background-color: #00bbee;
-        }
-        .sort{
-            width: 832px;
-            height: 30px;
-            margin-left: 18px;
-            margin-top: 17px;
-            background-color: #edf5f9;
-            border: 1px solid #d2f1ff;
-        }
-
-        .sort .sort-type{
-            width: 60px;
-            height: 30px;
-            margin-right: 40px;
-            font-size: 14px;
-            line-height: 30px;
-            color: #666;
-        }
-        .sort .info-amount{
-            width: 200px;
-            height: 30px;
-            margin-right: 20px;
-            font-size: 14px;
-            line-height: 30px;
-            color: #666;
-        }
-        .sort .info-amount span{
-            color: #ff6445;
-        }
-        .bill-info{
-            width: 834px;
-            height: 200px;
-            margin-left: 18px;
-            margin-top: 10px;
-            border: 1px solid #c6eaff;
-        }
-        .bill-info-top{
-            width: 834px;
-            height: 40px;
-            background-color: #c6eaff;
-        }
-        .bill-info-n{
-            width: 88px;
-            height: 40px;
-            font-size: 14px;
-            color: #666666;
-            line-height: 40px;
-        }
-        .bill-info-no{
-            width:200px;
-            height: 40px;
-            margin-left: 10px;
-            font-size: 14px;
-            color: #666;
-            line-height: 41px;
-        }
-        .expect-m{
-            width: 200px;
-            height: 40px;
-            /*background-color: orange;*/
-            margin-right: 114px;
-            font-size: 14px;
-            color: #ff5050;
-            line-height: 40px;
-        }
-        .bill-info-buttom{
-            width: 834px;
-            height: 160px;
-            /*background-color: orange;*/
-        }
-        .bill-ibl{
-            width: 180px;
-            height: 130px;
-            margin-top: 15px;
-            border-right: 1px dashed #c6eaff;
-        }
-        .bill-bank{
-            width: 160px;
-            height: 20px;
-            margin-top: 20px;
-            margin-left: 16px;
-            font-size: 14px;
-            color: #333;
-            line-height: 20px;
-            /*background-color: orange;*/
-        }
-        .bill-bank-name{
-            width: 160px;
-            height: 20px;
-            margin-top: 30px;
-            margin-left: 16px;
-            font-size: 14px;
-            color: #333;
-            line-height: 20px;
-            /*background-color: orange;*/
-        }
-        .bill-ibt{
-            width: 128px;
-            height: 130px;
-            margin-top: 15px;
-            border-right: 1px dashed #c6eaff;
-        }
-        .bill-money{
-            width: 90px;
-            height: 20px;
-            margin-top: 20px;
-            margin-left: 26px;
-            font-size: 14px;
-            color: #333;
-            line-height: 20px;
-        }
-        .bill-money-name{
-            width: 90px;
-            height: 20px;
-            margin-top: 30px;
-            margin-left: 26px;
-            font-size: 14px;
-            color: #ff5050;
-            line-height: 20px;
-        }
-        .textb{
-            color: #333333;
-        }
-        .bill-ibth{
-            width: 190px;
-            height: 130px;
-            margin-top: 15px;
-            border-right: 1px dashed #c6eaff;
-        }
-        .bill-ibf{
-            width: 330px;
-            height: 130px;
-            margin-top: 15px;
-        }
-        .bill-ibll{
-            width: 90px;
-            height: 130px;
-            /*background-color: orange;*/
-        }
-        .bill-iblc{
-            width: 100px;
-            height: 130px;
-            /*background-color: lightcyan;*/
-        }
-        .bill-iblr{
-            width: 130px;
-            height: 130px;
-            /*background-color: lightcoral;*/
-        }
-        .bill-iblr-btn{
-            width: 100px;
-            height: 34px;
-            margin-top: 7px;
-            font-size: 14px;
-            line-height: 34px;
-            background-color: #00aeff;
-            color: white;
-        }
-        .btnmt{
-            margin-top: 23px;
-        }
-        .bill-iblr-btn:hover{
-            background-color: #009de6;
-        }
-        .pagination{
-            width: 834px;
-            height: 40px;
-            margin-top: 30px;
-            margin-left: 18px;
-            /*background-color: orange;*/
-        }
-        .page-text{
-            float: left;
-            width: 60px;
-            height: 38px;
-            margin-left: 4px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 38px;
-            background-color: #f2f7fa;
-            color: #666;
-            border: 1px solid #c2dceb;
-        }
-        .page-no{
-            float: left;
-            width: 38px;
-            height: 38px;
-            margin-left: 4px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 38px;
-            background-color: #f2f7fa;
-            color: #666;
-            border: 1px solid #c2dceb;
-        }
-        .page-s{
-            float: left;
-            width: 16px;
-            height: 38px;
-            margin-left: 4px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 38px;
-            color: #666;
-        }
-        .page-f{
-            margin-left: 175px;
-        }
     </style>
     <script type="text/javascript">
         $(function () {
@@ -340,33 +26,30 @@
             })
         });
 
-
         $(function() {
 
             console.log($('#number').html());
 
-//            var asc = function(a, b) {
-//                return $(a).find('input').val() > $(b).find('input').val() ? 1 : -1;
-//            }
-//            var desc = function(a, b) {
-//                return $(a).find('input').val() > $(b).find('input').val() ? -1 : 1;
-//            }
-//
-//            var sortByInput = function(sortBy) {
-//                var sortEle = $('.container>div').sort(sortBy);
-//                $('.container').empty().append(sortEle);
-//            }
-//
-//            $('#desc').click(function() {
-//                sortByInput(desc);
-//            });
-//
-//            $('#asc').click(function() {
-//                sortByInput(asc);
-//            });
+            var asc = function(a, b) {
+                return $(a).find('input').val() > $(b).find('input').val() ? 1 : -1;
+            }
+            var desc = function(a, b) {
+                return $(a).find('input').val() > $(b).find('input').val() ? -1 : 1;
+            }
+
+            var sortByInput = function(sortBy) {
+                var sortEle = $('.sorting>div').sort(sortBy);
+                $('.sorting').empty().append(sortEle);
+            }
+
+            $('#desc').click(function() {
+                sortByInput(desc);
+            });
+
+            $('#asc').click(function() {
+                sortByInput(asc);
+            });
         })
-
-
     </script>
 </head>
 <body>
@@ -452,14 +135,15 @@
 
         <div class="sort">
             <div class="fl tac sort-type">默认</div>
-            <div class="fl tac sort-type">金额</div>
+            <div class="fl tac sort-type" id="desc">金额</div>
             <div class="fl tac sort-type">到期日</div>
             <div class="fl tac sort-type">剩余天数</div>
             <div class="fr tar info-amount">共<span>8888</span>条票据信息</div>
         </div>
 
         <div class="sorting">
-            <div class="bill-info">
+            <div class="bill-info" id="1">
+                <input type="hidden" value="100000">
                 <div class="bill-info-top">
                     <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
                     <div class="fl tal bill-info-no">88888888888888888888888</div>
@@ -496,7 +180,8 @@
                 </div>
             </div>
             
-            <div class="bill-info">
+            <div class="bill-info" id="2">
+                <input type="hidden" value="880000">
                 <div class="bill-info-top">
                     <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
                     <div class="fl tal bill-info-no">88888888888888888888888</div>
@@ -513,12 +198,12 @@
                     </div>
                     <div class="fl bill-ibth">
                         <div class="tal bill-money">票据到期日</div>
-                        <div class="tal textb bill-money-name">2017-09-08</div>
+                        <div class="tal textb bill-money-name">2016-10-26</div>
                     </div>
                     <div class="fl bill-ibf">
                         <div class="fl bill-ibll">
                             <div class="tal bill-money">承兑行/人</div>
-                            <div class="tal textb bill-money-name">4</div>
+                            <div class="tal textb bill-money-name">2</div>
                         </div>
                         <div class="fl bill-iblc">
                             <div class="tal bill-money">交易状态</div>
@@ -546,11 +231,6 @@
             <div class="page-text">尾页</div>
         </div>
     </div>
-
-
-
-
-
 </div>
 
 
