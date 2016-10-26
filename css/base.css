@@ -72,7 +72,15 @@ table {
 .hide {
     display: none
 }
-
+.bgc-b{
+    background-color: #36baf7;
+}
+.c-b{
+    color: #333333;
+}
+.c-w{
+    color: #ffffff;
+}
 /*顶部导航*/
 .top-nav-up{
     width: 100%;
@@ -117,7 +125,7 @@ table {
 .nav-logo {
     width: 300px;
     height: 100px;
-    background-color: lightblue;
+    /*background-color: lightblue;*/
     line-height: 100px;
 }
 .nav-account{
