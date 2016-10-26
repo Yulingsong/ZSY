@@ -133,9 +133,10 @@ table {
     height: 100px;
     margin-right: 30px;
     margin-left: 46px;
-
+    /*background-color: orange;*/
 }
 .account-name{
+    position: relative;
     width: 125px;
     font-size: 16px;
     color: #333;
@@ -143,15 +144,21 @@ table {
 
 }
 .account-quit{
-    width: 44px;
+    position: relative;
+    /*width: 44px;*/
     height: 17px;
+    top: 41px;
     font-size: 16px;
+    line-height: 17px;
     color: #333;
     cursor: pointer;
-    margin-top: 42px;
+    /*margin-top: 42px;*/
     border-left: 1px solid #777;
 }
 .nav-account img{
+    position: absolute;
+    left: 100px;
+    top: 40px;
     cursor: pointer;
 }
 .nav-account span{
