@@ -78,21 +78,22 @@
         }
         .select-people{
             width: 834px;
-            height: 100px;
+            height: 80px;
             margin-left: 18px;
             margin-top: 5px;
             /*background-color: orange;*/
         }
         .select-people .select-type{
+            float: left;
             width: 834px;
-            height: 50px;
+            height: 40px;
         }
         .type-title{
             float: left;
             width: 121px;
             height: 50px;
             /*margin-right: ;*/
-            font-size: 16px;
+            font-size: 14px;
             line-height: 50px;
             color: #666;
         }
@@ -102,10 +103,10 @@
             width: 92px;
             height: 30px;
             margin-top: 10px;
-            margin-left: 20px;
+            margin-left: 5px;
             text-align: center;
             line-height: 30px;
-            font-size: 16px;
+            font-size: 14px;
             color: #333;
             cursor:pointer;
             border-radius: 5px;
@@ -251,20 +252,76 @@
         .bill-ibll{
             width: 90px;
             height: 130px;
-            background-color: orange;
+            /*background-color: orange;*/
         }
         .bill-iblc{
             width: 100px;
             height: 130px;
-            background-color: lightcyan;
+            /*background-color: lightcyan;*/
         }
         .bill-iblr{
             width: 130px;
             height: 130px;
-            background-color: lightcoral;
+            /*background-color: lightcoral;*/
         }
         .bill-iblr-btn{
-            
+            width: 100px;
+            height: 34px;
+            margin-top: 7px;
+            font-size: 14px;
+            line-height: 34px;
+            background-color: #00aeff;
+            color: white;
+        }
+        .btnmt{
+            margin-top: 23px;
+        }
+        .bill-iblr-btn:hover{
+            background-color: #009de6;
+        }
+        .pagination{
+            width: 834px;
+            height: 40px;
+            margin-top: 30px;
+            margin-left: 18px;
+            /*background-color: orange;*/
+        }
+        .page-text{
+            float: left;
+            width: 60px;
+            height: 38px;
+            margin-left: 4px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 38px;
+            background-color: #f2f7fa;
+            color: #666;
+            border: 1px solid #c2dceb;
+        }
+        .page-no{
+            float: left;
+            width: 38px;
+            height: 38px;
+            margin-left: 4px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 38px;
+            background-color: #f2f7fa;
+            color: #666;
+            border: 1px solid #c2dceb;
+        }
+        .page-s{
+            float: left;
+            width: 16px;
+            height: 38px;
+            margin-left: 4px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 38px;
+            color: #666;
+        }
+        .page-f{
+            margin-left: 175px;
         }
     </style>
     <script type="text/javascript">
@@ -282,6 +339,34 @@
                 $(this).addClass("select-type-sel");
             })
         });
+
+
+        $(function() {
+
+            console.log($('#number').html());
+
+//            var asc = function(a, b) {
+//                return $(a).find('input').val() > $(b).find('input').val() ? 1 : -1;
+//            }
+//            var desc = function(a, b) {
+//                return $(a).find('input').val() > $(b).find('input').val() ? -1 : 1;
+//            }
+//
+//            var sortByInput = function(sortBy) {
+//                var sortEle = $('.container>div').sort(sortBy);
+//                $('.container').empty().append(sortEle);
+//            }
+//
+//            $('#desc').click(function() {
+//                sortByInput(desc);
+//            });
+//
+//            $('#asc').click(function() {
+//                sortByInput(asc);
+//            });
+        })
+
+
     </script>
 </head>
 <body>
@@ -373,12 +458,12 @@
             <div class="fr tar info-amount">共<span>8888</span>条票据信息</div>
         </div>
 
-        <div>
+        <div class="sorting">
             <div class="bill-info">
                 <div class="bill-info-top">
                     <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
                     <div class="fl tal bill-info-no">88888888888888888888888</div>
-                    <div class="fr tar expect-m">期望成交价: 100,000元</div>
+                    <div class="fr tar expect-m">期望成交价: <span id="number">100,000</span>元</div>
                 </div>
                 <div class="bill-info-buttom">
                     <div class="fl bill-ibl">
@@ -412,12 +497,56 @@
             </div>
             
             <div class="bill-info">
-                
+                <div class="bill-info-top">
+                    <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
+                    <div class="fl tal bill-info-no">88888888888888888888888</div>
+                    <div class="fr tar expect-m">期望成交价: <span id="number1">880,000</span>元</div>
+                </div>
+                <div class="bill-info-buttom">
+                    <div class="fl bill-ibl">
+                        <div class="tal bill-bank">承兑行/人</div>
+                        <div class="tal bill-bank-name">中石油股份有限公司</div>
+                    </div>
+                    <div class="fl bill-ibt">
+                        <div class="tal bill-money">承兑行/人</div>
+                        <div class="tal bill-money-name">880,000元</div>
+                    </div>
+                    <div class="fl bill-ibth">
+                        <div class="tal bill-money">票据到期日</div>
+                        <div class="tal textb bill-money-name">2017-09-08</div>
+                    </div>
+                    <div class="fl bill-ibf">
+                        <div class="fl bill-ibll">
+                            <div class="tal bill-money">承兑行/人</div>
+                            <div class="tal textb bill-money-name">4</div>
+                        </div>
+                        <div class="fl bill-iblc">
+                            <div class="tal bill-money">交易状态</div>
+                            <div class="tal bill-money-name">待审核</div>
+                        </div>
+                        <div class="fl bill-iblr">
+                            <div class="fr tac bill-iblr-btn btnmt">查看</div>
+                            <div class="fr tac bill-iblr-btn">修改</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-
-
+        <div class="pagination">
+            <div class="page-text page-f">首页</div>
+            <div class="page-text">上一页</div>
+            <div class="page-no">1</div>
+            <div class="page-no">2</div>
+            <div class="page-no">3</div>
+            <div class="page-no">4</div>
+            <div class="page-s">...</div>
+            <div class="page-no">10</div>
+            <div class="page-text">下一页</div>
+            <div class="page-text">尾页</div>
+        </div>
     </div>
+
 
 
 
