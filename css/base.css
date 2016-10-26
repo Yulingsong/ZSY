@@ -166,25 +166,29 @@ table {
 }
 .menu{
     height: 100px;
-    width: 400px;
+    width: 430px;
     line-height: 100px;
 }
+
 .menu a{
     display: block;
-
     float: left;
-    width: 65px;
+    width: 91px;
     height: 100px;
-    margin-left: 26px;
     line-height: 100px;
     text-align: center;
     font-size: 16px;
     color: #333;
-    /*background-color: orange;*/
+}
+.menu a:hover{
+    background-color: #00bbee;
+    color: white;
 }
 .af{
-    width: 34px !important;
+    width: 60px !important;
     margin-left:0 !important;
+    background-color: #00bbee !important;
+    color: white !important;
 }
 
 /*底部*/

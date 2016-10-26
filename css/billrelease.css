@@ -135,6 +135,7 @@
     margin-left: 28px;
 }
 .select-file{
+    position: relative;
     float: left;
     width: 36px;
     height: 26px;
@@ -144,6 +145,24 @@
     font-size: 15px;
     color: #ffffff;
     background-color: #FF6445;
+    z-index: 1;
+}
+.select-file:hover{
+    background-color: #ff8871;
+}
+.uploadfile{
+    position:absolute;
+    left: 0;
+    top:0;
+    filter:alpha(opacity:0);opacity: 0;
+    z-index: 0;
+    cursor: pointer;
+}
+.uploadfile-bill{
+    position: absolute;
+    left: 0;
+    height: 30px;
+    filter:alpha(opacity:0);opacity: 0;
 }
 .inner-row-text{
     width: 460px;
@@ -165,13 +184,47 @@
     color: #b6bfc5;
     text-indent:8px
 }
+.inner-row-input .yuan-input{
+    float: left;
+    width: 220px;
+    border-right: none;
+}
+.yuan{
+    float: left;
+    width: 38px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    color: #ff7155;
+    text-indent:8px;
+    border: 1px solid #aaaaaa;
+    border-left: none;
+}
 .inner-row-input .input-s{
+    float: left;
     width: 150px;
     height: 30px;
     border: 1px solid #aaa;
     font-size: 14px;
     color: #b6bfc5;
     text-indent:8px
+}
+.inner-row-input .yuan-input-s{
+    float: left;
+    width: 110px;
+    border-right: none;
+}
+.choose-date{
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+    margin-left: 10px;
+    background: url("../images/date.png")no-repeat center center;
+}
+.choose-date:hover{
+    background: url("../images/date-hover.png")no-repeat center center;
 }
 .input-radio{
     float: left;
@@ -180,7 +233,7 @@
     font-size: 14px;
     line-height: 30px;
     color: #666666;
-    background-color: orange;
+    /*background-color: orange;*/
 }
 .i-ensure{
     float: left;
@@ -192,6 +245,7 @@
     color: #666666;
 }
 .bill-file{
+    position: relative;
     float: left;
     width: 78px;
     height: 30px;
@@ -200,6 +254,9 @@
     line-height: 30px;
     color: #ffffff;
     background-color: #ff6445;
+}
+.bill-file:hover{
+    background-color: #ff8871;
 }
 .max-filenum{
     float: left;
