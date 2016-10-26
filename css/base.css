@@ -146,7 +146,7 @@ table {
 }
 .account-quit{
     position: relative;
-    /*width: 44px;*/
+    width: 38px;
     height: 17px;
     top: 26px;
     font-size: 14px;
@@ -155,6 +155,7 @@ table {
     cursor: pointer;
     /*margin-top: 42px;*/
     border-left: 1px solid #777;
+    /*background-color: orange;*/
 }
 .nav-account img{
     position: absolute;

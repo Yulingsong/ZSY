@@ -27,9 +27,6 @@
         });
 
         $(function() {
-
-            console.log($('#number').html());
-
             var asc = function(a, b) {
                 return $(a).find('input').val() > $(b).find('input').val() ? 1 : -1;
             }
@@ -50,6 +47,10 @@
                 sortByInput(asc);
             });
         })
+
+        function clickget(){
+            window.open("alert.html", "newwindow", "height=500, width=300,top=300,left=300, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no");
+        }
     </script>
 </head>
 <body>
@@ -216,7 +217,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="pagination">
             <div class="page-text page-f">首页</div>
