@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>choosep</title>
+    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <script type="text/javascript">
+        $(function () {
+            $(".menu-l li").click(function () {
+                $(this).siblings().removeClass();
+                $(this).addClass("sel");
+                document.getElementById("sw").style.borderRight="1px solid #ccc";
+            })
+        });
+    </script>
+    <style type="text/css">
+        .content{
+            width:100%;
+            height: 1850px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .content-inner{
+            width: 1100px;
+            height: 1850px;
+            margin: 0 auto;
+        }
+        .cc-inner-top{
+            width: 1100px;
+            height: 72px;
+            margin: 0 auto;
+            /*background-color: olive;*/
+        }
+        .cc-inner-top-locate{
+            width: 500px;
+            height: 16px;
+            padding-top: 18px;
+            line-height: 16px;
+            font-size: 16px;
+            color: #666;
+            /*background-color: orange;*/
+        }
+        .cc-inner-top-back{
+            width: 84px;
+            height: 30px;
+            margin-right: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #666;
+            background-color: #eee;
+        }
+        .cc-inner-m{
+            /*float: left;*/
+            width: 1100px;
+            height: 100px;
+            margin: 0 auto;
+            /*background-color: lightcyan;*/
+        }
+        .cc-bill-r{
+            width: 150px;
+            height: 45px;
+            margin-right: 10px;
+            font-size: 16px;
+            line-height: 45px;
+            color: #666;
+            background-color: #ececec;
+        }
+        .cbr-local{
+            background-color: #ff6445;
+            color: white;
+        }
+        /*票据详情*/
+        .cc-inner-d{
+            width: 1098px;
+            height: 350px;
+            margin-top: 20px;
+            border: 1px solid #cccccc;
+        }
+        .cid-bill-expect span{
+            color: #ff5050;
+        }
+        .itemo{
+            width: 392px;
+        }
+        .itemt{
+            width: 383px;
+        }
+        .cid-detail-item{
+            float: left;
+            height: 350px;
+            margin-top: 30px;
+            margin-right: 70px;
+            font-size: 14px;
+            line-height: 35px;
+            color: #666666;
+        }
+        .cdi-gr{
+            color: #00c48f;
+        }
+        .cdi-we{
+            font-weight: bold;
+            color: #333;
+        }
+        .cdi-t{
+            color: #ff5050;
+        }
+        .cdi-l{
+            margin-left: 180px;
+        }
+        .cc-inner-billp{
+            width: 1098px;
+            height: 692px;
+            margin-top: 30px;
+            border: 1px solid #ccc;
+        }
+        .cib-top{
+            width: 1096px;
+            height: 58px;
+            border-bottom: 1px solid #ccc;
+        }
+        .cib-top-side{
+            width: 300px;
+            height: 58px;
+            margin-left: 60px;
+            /*background-color: orange;*/
+        }
+        .cib-top-side .menu-l{
+            list-style:none;
+        }
+        .cib-top-side .menu-l li{
+            float: left;
+            width: 100px;
+            height: 20px;
+            margin-top: 19px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+            color: #666;
+            cursor:pointer;
+            /*background-color: orange;*/
+            /*border-left: 1px solid #cccccc;*/
+        }
+        .cib-top-side .menu-l li.sel{
+            color:#ff6445;
+        }
+        .cib-blp{
+            border-right: 1px solid #cccccc;
+        }
+        .cib-img{
+            width: 1098px;
+            height: 630px;
+            /*background-color: orange;*/
+        }
+        .cib-img-p{
+            width: 810px;
+            height: 575px;
+            margin: 0 auto;
+            margin-top: 30px;
+            background-color: #eee;
+
+            text-align: center;
+            line-height: 575px;
+        }
+
+        /*私有部分*/
+        .cc-inner-one{
+            width: 1098px;
+            height: 90px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+        .cc-inner-two{
+            width: 1098px;
+            height: 200px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+        .cc-inner-one-top{
+            width: 1098px;
+            height: 45px;
+            /*background-color: orange;*/
+        }
+        .cc-inner-one-buttom{
+            width: 1098px;
+            height: 42px;
+            /*background-color: lightcyan;*/
+        }
+        .ciot-time{
+            width: 1000px;
+            height: 45px;
+            margin-left: 14px;
+            font-size: 16px;
+            line-height: 45px;
+            color: #ff6445;
+
+        }
+        .ciot-time span{
+            color: #00abfa;
+            cursor: pointer;
+        }
+        .ciot-cn{
+            width: 1000px;
+            height: 42px;
+            margin-left: 14px;
+            font-size: 16px;
+            line-height: 42px;
+            color: #666;
+        }
+        .ciot-cn span{
+            font-size: 18px;
+            color: #333333;
+        }
+        .cio-expect{
+            width: 105px;
+            height: 90px;
+            margin-left: 235px;
+            font-size: 16px;
+            line-height: 90px;
+            color: #666;
+        }
+        .cio-input{
+            width: 240px;
+            height: 36px;
+            margin-top: 26px;
+            margin-left: 5px;
+            /*background-color: orange;*/
+            border: 1px solid #cccccc;
+            border-right: none;
+        }
+        .cio-input input{
+            width: 240px;
+            height: 36px;
+            border: none;
+            font-size: 16px;
+            line-height: 36px;
+            color: #666;
+            text-indent: 10px;
+        }
+        .cio-yuan{
+            width: 35px;
+            height: 36px;
+            margin-top: 26px;
+            border: 1px solid #cccccc;
+            border-left: none;
+            font-size: 16px;
+            line-height: 36px;
+            color: #ec252f;
+        }
+        .cio-comfirm{
+            width: 120px;
+            height: 40px;
+            margin-top: 25px;
+            margin-left: 10px;
+            font-size: 14px;
+            line-height: 40px;
+            color: white;
+            background-color: #ff4c55;
+        }
+        .cio-comfirm:hover{
+            background-color: #ec252f;
+        }
+        .cit-item{
+            width: 500px;
+            height: 200px;
+            /*margin-right: 10px;*/
+
+        }
+        .cit-item-l{
+            width: 105px;
+            height: 200px;
+            margin-left: 65px;
+        }
+        .cit-item-r{
+            width: 300px;
+            height: 200px;
+            /*background-color: orange;*/
+        }
+        .cil-title{
+            width: 104px;
+            height: 25px;
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 25px;
+            color: #666666;
+            /*background-color: lightcyan;*/
+        }
+        .cir-input{
+            width: 275px;
+            height: 36px;
+            margin-top: 27px;
+            margin-left: 5px;
+        }
+        .cir-input input{
+            float: left;
+            width: 235px;
+            height: 34px;
+            border: 1px solid #cccccc;
+            border-right: none;
+            font-size: 16px;
+            line-height: 34px;
+            text-indent: 10px;
+            color: #666666;
+        }
+        .cir-inner-yuan{
+            width: 35px;
+            height: 34px;
+            border: 1px solid #cccccc;
+            border-left: none;
+            text-align: center;
+            font-size: 16px;
+            line-height: 36px;
+            color: #ec252f;
+        }
+        .cir-btn{
+            width: 120px;
+            height: 40px;
+            margin-left: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 40px;
+            color: white;
+            background-color: #ff5050;
+        }
+        .cir-btn:hover{
+            background-color: #ec252f;
+        }
+        .citr-msg{
+            width: 500px;
+            height: 36px;
+            margin-top: 27px;
+            margin-left: 15px;
+        }
+        .cir-mt{
+            margin-top: 16px;
+        }
+        .citr-msg{
+            font-size: 16px;
+            line-height: 36px;
+            color: #666666;
+        }
+        .citr-msg span{
+            font-size: 14px;
+            color: #ff6445;
+        }
+        .citr-msg-sp{
+            font-size: 20px!important;
+        }
+    </style>
+
+</head>
+<body>
+<div class="nav">
+    <div class="top-nav-up">
+        <div class="top-nav-inner">
+            <div class="fl tal inner-phone">客服电话:400-8888-888</div>
+            <div class="fl tal inner-tradetime">交易时间:上午8:00-下午16:30(工作日)</div>
+            <div class="fr tar inner-hello">您好,欢迎来到票据交易中心</div>
+        </div>
+    </div>
+    <div class="top-nav-down">
+        <div class="top-nav-inner2">
+            <div class="fl tac nav-logo">
+                <img src="../images/LOGO(1).png">
+            </div>
+            <div>
+
+            </div>
+            <div class="fr tar nav-account">
+                <div class="fl tac account-name">张三,您好 &nbsp&nbsp<img src="../images/info-center.png"></div>
+                <div class="fr tac account-quit">退出</div>
+            </div>
+
+            <div class="fr menu">
+                <ul>
+                    <a href="#" class="af">首页</a>
+                    <a href="#">我要贴现</a>
+                    <a href="#">我要收票</a>
+                    <a href="#">我的账号</a>
+                    <a href="#">帮助中心</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content" >
+    <div class="content-inner">
+        <div class="cc-inner-top">
+            <div class="fl tal cc-inner-top-locate">当前位置 : 已发布票据 > 选择竞价方</div>
+            <div class="fr tac cc-inner-top-back" onclick="back()">返回</div>
+        </div>
+        <div class="cc-inner-m">
+            <div>
+                <div class="fl tac cc-bill-r">票据发布</div>
+                <div class="fl tac cc-bill-r">平台审核</div>
+                <div class="fl tac cc-bill-r">竞价中</div>
+                <div class="fl tac cc-bill-r cbr-local">选择竞价方</div>
+            </div>
+            <!--<div>-->
+                <!--<div class="fl tal cc-bill-notice">请谨慎选择,确认竞价后不可更改</div>-->
+            <!--</div>-->
+        </div>
+
+        <div class="cc-inner-one">
+            <div class="cc-inner-one-top">
+                <div class="fl tal ciot-time">2016-10-14&nbsp&nbsp09:13:32 &nbsp&nbsp&nbsp&nbsp&nbsp竞价中&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>更多>></span></div>
+            </div>
+            <div class="cc-inner-one-buttom">
+                <div class="fl tal ciot-cn">持票企业名称&nbsp&nbsp:&nbsp&nbsp<span>天天一号运输有限公司</span></div>
+            </div>
+        </div>
+        <div class="cc-inner-one">
+            <div class="fl tac cio-expect">期望成交价&nbsp&nbsp:</div>
+            <div class="fl cio-input"><input type="text" value="190,000,000"></div>
+            <div class="fl tac cio-yuan">元</div>
+            <div class="fl tac cio-comfirm">确认</div>
+        </div>
+        <div class="cc-inner-two">
+            <div class="fl cit-item">
+                <div class="fl cit-item-l">
+                    <div class="tal cil-title">您的报价</div>
+                    <div class="tal cil-title">年利率</div>
+                </div>
+                <div class="fl cit-item-r">
+                    <div class="cir-input">
+                        <input type="text">
+                        <div class="fl cir-inner-yuan">元</div>
+                    </div>
+                    <div class="cir-input cir-mt">
+                        <input type="text">
+                        <div class="fl cir-inner-yuan">%</div>
+                    </div>
+                    <div class="fl tac cir-btn">确认</div>
+                </div>
+            </div>
+            <div class="fl cit-item">
+                <div class="tal citr-msg">已有<span class="citr-msg-sp">99</span>家参加竞价</div>
+                <div class="tal citr-msg cir-mt"><span>竞价完成后,在持票人尚未确认竞价之前可在已竞价票据中更改竞价价格</span></div>
+            </div>
+        </div>
+
+        <div class="cc-inner-d">
+                <div class="tal cid-detail-item itemo cdi-l">
+                    出票起始&nbsp&nbsp:&nbsp&nbsp2016-08-09<br>
+                    到期日&nbsp&nbsp :&nbsp&nbsp 2017-08-09<br>
+                    出票人&nbsp&nbsp :&nbsp&nbsp <span class="cdi-we">中石油股份有限公司</span><br>
+                    出票人账号&nbsp&nbsp : &nbsp&nbsp3205294888888<br>
+                    出票人开户行&nbsp&nbsp:&nbsp&nbsp招商银行深圳分行
+                    出票保证人名称&nbsp&nbsp : &nbsp&nbsp天天二号有限公司<br>
+                    剩余天数&nbsp&nbsp:&nbsp&nbsp134<br>
+                    票面金额&nbsp&nbsp : &nbsp&nbsp<span class="cdi-t">2,000,000,元</span><br>
+                </div>
+                <div class="cid-detail-item itemt">
+                    交易状态&nbsp&nbsp:&nbsp&nbsp<span class="cdi-gr">显示票据交易状态</span><br>
+                    票据号码&nbsp&nbsp:&nbsp&nbsp888888888888888888888888888<br>
+                    承兑行/人&nbsp&nbsp:&nbsp&nbsp <span class="cdi-we">中石油股份有限公司</span><br>
+                    承兑人账号&nbsp&nbsp:&nbsp&nbsp9999999999999<br>
+                    承兑人开户行&nbsp&nbsp:&nbsp&nbsp招商银行深圳分行<br>
+                    成对保证人名称&nbsp&nbsp:&nbsp&nbsp天空<br>
+                    承兑人地区&nbsp&nbsp:&nbsp&nbsp华东<br>
+                    期望成交价&nbsp&nbsp:&nbsp&nbsp<span class="cdi-t">2,000,000,元</span>
+                </div>
+        </div>
+        <div class="cc-inner-billp">
+            <div class="cib-top">
+                <div class="cib-top-side">
+                    <ul class="menu-l">
+                        <li class="sel cib-blp" id="sw">票据正面</li>
+                        <li>票据背面</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="cib-img">
+                <div class="cib-img-p">汇票图片</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="buttom">
+    <div class="buttom-inner">
+        <div class="fl buttom-l">
+            <div class="fr buttom-menu">
+                <img src="../images/security.png">
+                <ul>
+                    <a href="#" class="bm-l-title">安全保障</a>
+                    <a href="#">会员资质</a>
+                    <a href="#">资金安全</a>
+                    <a href="#">交易安全</a>
+                    <a href="#">网络安全</a>
+                </ul>
+            </div>
+            <div class="fr buttom-menu">
+                <img src="../images/help.png">
+                <ul>
+                    <a href="#" class="bm-l-title">帮助中心</a>
+                    <a href="#">我是卖方</a>
+                    <a href="#">我是买方</a>
+                    <a href="#">常用知识</a>
+                </ul>
+            </div>
+            <div class="fr buttom-menu">
+                <img src="../images/info.png">
+                <ul>
+                    <a href="#" class="bm-l-title">关于我们</a>
+                    <a href="#">关于中顺易</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">网站公告</a>
+                </ul>
+            </div>
+        </div>
+        <div class="fr buttom-r">
+            <div class="fl buttom-menu-ro">
+                <img src="../images/phone.png">
+                <ul>
+                    <a href="" class="bm-r-title">客服电话:</a>
+                    <a href="">400-8888-888</a>
+                </ul>
+            </div>
+            <div class="fl buttom-menu-rt">
+                <img src="../images/time.png">
+                <ul>
+                    <a href="" class="bm-r-title">交易时间:</a>
+                    <a href="">上午8:00-下午16:30(工作日)</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
