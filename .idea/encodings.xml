@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/images/banner.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/images/cost.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/images/cost.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/images/qucik.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/images/security(1).png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/images/security-2.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/images/speed.png" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

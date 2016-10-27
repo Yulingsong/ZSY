@@ -1,0 +1,159 @@
+.bold {
+    font-weight:bold;
+}
+
+.one-line{
+    width:100%;
+    height:2px;
+    margin:0px auto;
+    padding:0px;
+    background-color:#D5D5D5;
+    overflow:hidden;
+}
+
+.account-login{
+    position: relative;
+    width: 50px;
+    font-size: 14px;
+    color: #333;
+    line-height: 70px;
+
+}
+
+.account-quit{
+    position: relative;
+    /*width: 44px;*/
+    height: 17px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333;
+    cursor: pointer;
+    margin-top: 0.7px;
+    border-left: 1px solid #777;
+}
+
+.banner {
+    width:100%;
+    height: 500px;
+}
+
+.bulletin {
+    margin-right: auto;
+    margin-left: auto;
+    width : 100%;
+    height: 80px;
+    /*border: solid 1px rgba(0,0,0,0.15);*/
+}
+
+.bulletin-content {
+    padding-top: 25px;
+    text-align: center;
+    vertical-align:middle;
+    font-size: 20px;
+}
+
+.bulletin-dist {
+    margin-left: 106px;
+}
+
+.bulletin-etc-dist {
+    margin-left: 88px;
+}
+
+.bulletin-date-dist {
+    margin-left: 36px;
+}
+
+.bulletin-l {
+    width: 776px;
+    height: 328px;
+    float: left;
+    border: solid 1px #dddddd;
+
+}
+
+.bulletin-r {
+    width: 320px;
+    height:328px;
+    border: solid 1px #dddddd;
+    float: right;
+    display:inline;
+}
+
+.description {
+    margin-right: auto;
+    margin-left: auto;
+    width : 100%;
+    height: 392px;
+    background-color: white;
+}
+
+.description-dist-l {
+    margin-left: 74px;
+}
+
+.description-dist {
+    margin-left: 205px;
+}
+
+
+.bid {
+    margin-top: 28px;
+    margin-right: auto;
+    margin-left: auto;
+    width : 100%;
+    height: 490px;
+    border: solid 1px #00bbee;
+}
+
+.progress {
+    margin-right: auto;
+    margin-left: auto;
+    width : 100%;
+    height: 280px;
+    background-color: #F8F9FB;
+    /*border: solid 1px #00bbee;*/
+}
+
+.cash {
+    margin-top: 34px;
+    margin-right: auto;
+    margin-left: auto;
+    width : 100%;
+    height: 230px;
+    border: solid 1px #00bbee;
+}
+
+.img-security {
+
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    margin:auto;
+    right:0;
+    top:100px;
+    bottom:0;
+}
+
+.an{
+    font-size: 12px;
+    color: #777 !important;
+    margin-left: 16px;
+}
+
+.inner-hello
+{
+    width: 250px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #777;
+    margin-right: 20px;
+}
+
+.inline {
+    display: inline;
+}
