@@ -59,16 +59,16 @@
             /*background-color: lightcyan;*/
         }
         .cc-bill-r{
-            width: 150px;
-            height: 45px;
-            margin-right: 10px;
-            font-size: 16px;
+            width: 135px;
+            height: 44px;
+            /*margin-right: 10px;*/
+            font-size: 14px;
             line-height: 45px;
             color: #666;
             background-color: #ececec;
         }
         .cbr-local{
-            background-color: #ff6445;
+            background-color: #ff757c;
             color: white;
         }
         /*票据详情*/
@@ -347,6 +347,7 @@
         .citr-msg-sp{
             font-size: 20px!important;
         }
+
     </style>
 
 </head>
@@ -390,16 +391,28 @@
             <div class="fl tal cc-inner-top-locate">当前位置 : 已发布票据 > 选择竞价方</div>
             <div class="fr tac cc-inner-top-back" onclick="back()">返回</div>
         </div>
+
         <div class="cc-inner-m">
             <div>
-                <div class="fl tac cc-bill-r">票据发布</div>
-                <div class="fl tac cc-bill-r">平台审核</div>
-                <div class="fl tac cc-bill-r">竞价中</div>
-                <div class="fl tac cc-bill-r cbr-local">选择竞价方</div>
+                <div class="fl tac cc-bill-r">
+                    票据发布
+                </div>
+                <div class="cc-ar" ></div>
+                <div class="fl tac cc-bill-r">
+                    平台审核
+                    <div class="cc-al" ></div>
+                </div>
+                <div class="cc-ar" ></div>
+                <div class="fl tac cc-bill-r">
+                    竞价中
+                    <div class="cc-al" ></div>
+                </div>
+                <div class="cc-ar" ></div>
+                <div class="fl tac cc-bill-r cbr-local">
+                    选择竞价方
+                    <div class="cc-al" ></div>
+                </div>
             </div>
-            <!--<div>-->
-                <!--<div class="fl tal cc-bill-notice">请谨慎选择,确认竞价后不可更改</div>-->
-            <!--</div>-->
         </div>
 
         <div class="cc-inner-one">
@@ -439,7 +452,6 @@
                 <div class="tal citr-msg cir-mt"><span>竞价完成后,在持票人尚未确认竞价之前可在已竞价票据中更改竞价价格</span></div>
             </div>
         </div>
-
         <div class="cc-inner-d">
                 <div class="tal cid-detail-item itemo cdi-l">
                     出票起始&nbsp&nbsp:&nbsp&nbsp2016-08-09<br>

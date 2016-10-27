@@ -1,39 +1,56 @@
-<!DOCTYPE html>
+
+
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="http://www.zhimengzhe.com/" />
-    <title>织梦者</title>
-    <style>
-        .antzone{
+    <title>尖角div</title>
+    <style type="text/css">
+        /*div{*/
+            /*width: 0;*/
+            /*height: 0;*/
+            /*border-top: 50px solid transparent;*/
+            /*border-left: 100px solid red;*/
+            /*border-bottom: 50px solid transparent;*/
+        /*}*/
+        .t{
             float: left;
-            width:135px;
-            height:46px;
-            -webkit-transform:skew(20deg);
-            -moz-transform:skew(20deg);
-            -o-transform:skew(20deg);
-            -ms-transform:skew(20deg);
-            transform:skew(20deg);
-            background:#E5C3B2;
+            width: 100px;
+            height: 30px;
+            background-color: orange;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
         }
-        .antzone span{
-            display:inline-block;
-            -webkit-transform:skew(-20deg);
-        }
-        .antzone1{
+        .d{
             float: left;
-            width: 135px;
-            font-size: 16px;
-            line-height: 46px;
-            color: #666;
-            border-bottom: 46px solid #eee;
-            border-right: 15px solid transparent;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-left: 10px solid white;
+            border-bottom: 15px solid transparent;
+
+            /*background-color: white;*/
         }
+        .dt{
+            float: left;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-left: 10px solid orange;
+            border-bottom: 15px solid transparent;
+            /*background-color: orange;*/
+        }
+        /*.fr{*/
+            /*float: right;*/
+        /*}*/
     </style>
 </head>
-<body>
-<div class="antzone1"><span>你好</span></div>
-<div class="antzone"><span>你好</span></div>
 
+<body>
+<div class="t" >
+    <div class="d" ></div>
+    nihao
+</div>
+<div class="dt" ></div>
 </body>
-</html><br>
+
+</html>
