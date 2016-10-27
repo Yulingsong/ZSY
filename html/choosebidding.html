@@ -5,6 +5,15 @@
     <title>choosebidding</title>
     <script src="../js/jquery.js"></script>
     <link rel="stylesheet" href="../css/base.css">
+    <script type="text/javascript">
+        $(function () {
+            $(".menu-l li").click(function () {
+                $(this).siblings().removeClass();
+                $(this).addClass("sel");
+                document.getElementById("sw").style.borderRight="1px solid #ccc";
+            })
+        });
+    </script>
     <style type="text/css">
         .content{
             width:100%;
@@ -18,7 +27,7 @@
             width: 1100px;
             height: 1550px;
             margin: 0 auto;
-            background-color: lightcyan;
+            /*background-color: lightcyan;*/
         }
         .cc-inner-top{
             width: 1100px;
@@ -47,10 +56,11 @@
         }
 
         .cc-inner-m{
+            /*float: left;*/
             width: 1100px;
             height: 135px;
             margin: 0 auto;
-            /*background-color: lightcoral;*/
+            /*background-color: lightcyan;*/
         }
         .cc-bill-r{
             width: 150px;
@@ -61,6 +71,10 @@
             color: #666;
             background-color: #ececec;
         }
+        .cbr-local{
+            background-color: #ff6445;
+            color: white;
+        }
         .cc-bill-notice{
             width: 500px;
             height: 50px;
@@ -70,8 +84,245 @@
             color: #ff6445;
             /*background-color: #548ec9;*/
         }
+        .cc-bidding-p{
+            width: 1098px;
+            height: 198px;
+            /*margin-top: 100px;*/
+            border: 1px solid #ececec;
+            /*background-color: orange;*/
+        }
+        .cc-bidding-pt{
+            width: 1098px;
+            height: 54px;
+            background-color: #ececec;
+        }
+        .cc-bidding-pb{
+            width: 1098px;
+            height: 144px;
+        }
+        .cc-bidding-ptname{
+            width: 240px;
+            height: 54px;
+            /*background-color: orange;*/
+            text-align: center;
+            font-size: 16px;
+            line-height: 54px;
+            color: #666;
+        }
+        .cc-bidding-pbname{
+            width: 240px;
+            height: 112px;
+            margin-top: 16px;
+            border-right: 1px dashed #c6eaff;
+        }
+        .cc-bidding-ptmoney{
+            width: 270px;
+            height: 54px;
+            /*background-color: orange;*/
+            font-size: 16px;
+            line-height: 54px;
+            color: #666;
+        }
+        .cc-bidding-pbmoney{
+            width: 270px;
+            height: 112px;
+            margin-top: 16px;
+            border-right: 1px dashed #c6eaff;
+        }
+        .cc-bidding-ptcontact{
+            width: 165px;
+            height: 54px;
+            /*background-color: orange;*/
+            font-size: 16px;
+            line-height: 54px;
+            color: #666;
+        }
+        .cc-bidding-pbcontact{
+            width: 165px;
+            height: 112px;
+            margin-top: 16px;
+            border-right: 1px dashed #c6eaff;
+        }
+        .cc-bidding-ptphone{
+            width: 220px;
+            height: 54px;
+            font-size: 16px;
+            line-height: 54px;
+            color: #666;
+        }
+        .cc-bidding-pbphone{
+            width: 220px;
+            height: 112px;
+            margin-top: 16px;
+            border-right: 1px dashed #c6eaff;
+        }
+        .cc-bidding-ptclick{
+            width: 180px;
+            height: 54px;
+            /*background-color: orange;*/
+            font-size: 16px;
+            line-height: 54px;
+            color: #666;
+        }
+        .cc-bidding-pbclick{
+            width: 180px;
+            height: 112px;
+            margin-top: 16px;
+            /*background-color: ;*/
+        }
+        .cb-pttext{
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            line-height: 38px;
+        }
+        .number-red{
+            color: #ff5050;
+        }
+        .cb-chooseme{
+            width: 100px;
+            height: 34px;
+            margin: 0 auto;
+            margin-bottom: 4px;
+            /*margin-left: 45px;*/
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            line-height: 34px;
+            background-color: #ff4c55;
+        }
+        .cb-chooseme:hover{
+            background-color: #ec252f;
+        }
 
+        /*票据详情*/
+        .cc-inner-d{
+            /*float: left;*/
+            width: 1098px;
+            height: 302px;
+            margin-top: 20px;
+            border: 1px solid #cccccc;
+            /*background-color: orange;*/
+        }
+        .cid-top{
+            width: 1098px;
+            height: 62px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .cid-bill-no{
+            width: 400px;
+            height: 62px;
+            margin-left: 20px;
+            font-size: 18px;
+            line-height: 62px;
+            color: #666666;
+        }
+        .cid-bill-expect{
+            width: 250px;
+            height: 62px;
+            margin-right: 114px;
+            font-size: 17px;
+            line-height: 62px;
+            color: #666;
+        }
+        .cid-bill-expect span{
+            color: #ff5050;
+        }
+        .cid-detail{
+            width: 1098px;
+            height: 238px;
+            /*background-color: orange;*/
+        }
+        .itemo{
+            width: 392px;
+        }
+        .itemt{
+            width: 383px;
+        }
+        .itemth{
+            width: 269px;
+        }
+        .cid-detail-item{
+            float: left;
+            /*width: 346px;*/
+            height: 200px;
+            margin-top: 15px;
+            margin-right: 5px;
+            /*background-color: lightcyan;*/
+            font-size: 16px;
+            line-height: 50px;
+            color: #666666;
+        }
+        .cdi-o{
+            color: #ff6445;
+        }
+        .cdi-t{
+            color: #ff5050;
+        }
+        .cdi-th{
+            color:#00c48f;
+        }
+        .cdi-l{
+            margin-left: 20px;
+        }
+
+        .cc-inner-billp{
+            width: 1098px;
+            height: 692px;
+            margin-top: 30px;
+            border: 1px solid #ccc;
+        }
+        .cib-top{
+            width: 1096px;
+            height: 58px;
+            border-bottom: 1px solid #ccc;
+        }
+        .cib-top-side{
+            width: 300px;
+            height: 58px;
+            margin-left: 60px;
+            /*background-color: orange;*/
+        }
+        .cib-top-side .menu-l{
+            list-style:none;
+        }
+        .cib-top-side .menu-l li{
+            float: left;
+            width: 100px;
+            height: 20px;
+            margin-top: 19px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+            color: #666;
+            cursor:pointer;
+            /*background-color: orange;*/
+            /*border-left: 1px solid #cccccc;*/
+        }
+        .cib-top-side .menu-l li.sel{
+             color:#ff6445;
+         }
+        .cib-blp{
+            border-right: 1px solid #cccccc;
+        }
+        .cib-img{
+            width: 1098px;
+            height: 630px;
+            /*background-color: orange;*/
+        }
+        .cib-img-p{
+            width: 810px;
+            height: 575px;
+            margin: 0 auto;
+            margin-top: 30px;
+            background-color: #eee;
+
+            text-align: center;
+            line-height: 575px;
+        }
     </style>
+
 </head>
 <body>
 <div class="nav">
@@ -119,19 +370,90 @@
                 <div class="fl tac cc-bill-r">票据发布</div>
                 <div class="fl tac cc-bill-r">平台审核</div>
                 <div class="fl tac cc-bill-r">竞价中</div>
-                <div class="fl tac cc-bill-r">选择竞价方</div>
+                <div class="fl tac cc-bill-r cbr-local">选择竞价方</div>
             </div>
             <div>
                 <div class="fl tal cc-bill-notice">请谨慎选择,确认竞价后不可更改</div>
             </div>
+        </div>
+        <div class="cc-bidding-p">
+            <div class="cc-bidding-pt">
+                <div class="fl cc-bidding-ptname">竞价方名称</div>
+                <div class="fl tac cc-bidding-ptmoney">竞价金额(元)</div>
+                <div class="fl tac cc-bidding-ptcontact">联系人</div>
+                <div class="fl tac cc-bidding-ptphone">手机号码</div>
+                <div class="fl tac cc-bidding-ptclick">操作</div>
+            </div>
+            <div class="cc-bidding-pb">
+                <div class="cb-pttext cc-bidding-pbname">
+                    天天一号有限公司<br>
+                    天天二号有限公司<br>
+                    天天三号有限公司<br>
+                </div>
+                <div class="cb-pttext number-red cc-bidding-pbmoney">
+                    12,345,000<br>
+                    54,321,000<br>
+                    56,789,000<br>
+                </div>
+                <div class="cb-pttext cc-bidding-pbcontact">
+                    张三<br>
+                    李四<br>
+                    王五<br>
+                </div>
+                <div class="cb-pttext cc-bidding-pbphone">
+                    13898878723<br>
+                    13898878723<br>
+                    13898878723<br>
+                </div>
+                <div class="cb-pttext cc-bidding-pbclick">
+                    <div class="cb-chooseme">选我</div>
+                    <div class="cb-chooseme">选我</div>
+                    <div class="cb-chooseme">选我</div>
+                </div>
+            </div>
+        </div>
+        <div class="cc-inner-d">
+            <div class="cid-top">
+                <div class="fl tal cid-bill-no">票据号码 : 24848888888888888888</div>
+                <div class="fr tar cid-bill-expect">期望成交价 : <span>190,000元</span></div>
+            </div>
+            <div class="cid-detail">
+                <div class="tal cid-detail-item itemo cdi-l">
+                    出票起始 : 2016-08-09<br>
+                    出票人 : 中石油股份有限公司<br>
+                    承兑行/人 : 中石油股份有限公司<br>
+                    承兑类型 : <span class="cdi-o">集体</span><br>
+                </div>
+                <div class="cid-detail-item itemt">
+                    到期日 : 2017-08-09<br>
+                    出票人账号 : 32052948<br>
+                    承兑人账号 : 32052948<br>
+                    票面金额 : <span class="cdi-t">2,000,000,元</span><br>
+                </div>
+                <div class="cid-detail-item itemth">
+                    剩余天数 : 134<br>
+                    出票人开户行 : 招商银行深圳分行<br>
+                    承兑人开户行 : 招商银行深圳分行<br>
+                    交易状态 : <span class="cdi-th">竞价中</span><br>
+                </div>
+            </div>
+        </div>
+        <div class="cc-inner-billp">
+            <div class="cib-top">
+                <div class="cib-top-side">
+                    <ul class="menu-l">
+                        <li class="sel cib-blp" id="sw">票据正面</li>
+                        <li>票据背面</li>
 
+                    </ul>
+                </div>
+            </div>
+            <div class="cib-img">
+                <div class="cib-img-p">汇票图片</div>
+         </div>
         </div>
     </div>
 </div>
-
-
-
-
 
 <div class="buttom">
     <div class="buttom-inner">
