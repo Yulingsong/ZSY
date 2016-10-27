@@ -106,7 +106,7 @@
 }
 .select-type-menu li.select-type-sel{
     color: #fff;
-    background-color: #ff4c55;
+    background-color: #c6c6c6;
 }
 .sort{
     width: 832px;
@@ -118,7 +118,7 @@
 }
 
 .sort .sort-type{
-    width: 60px;
+    width: 70px;
     height: 30px;
     margin-right: 10px;
     font-size: 14px;
@@ -126,6 +126,12 @@
     color: #666;
     cursor: pointer;
     /*background-color: orange;*/
+}
+.sort .st-w-s{
+    width: 50px;
+}
+.sort .st-w-l{
+    width: 90px;
 }
 .sort .info-amount{
     width: 200px;
@@ -172,7 +178,7 @@
     /*background-color: orange;*/
     margin-right: 114px;
     font-size: 14px;
-    color: #ff5050;
+    color: #ff6445;
     line-height: 40px;
 }
 .bill-info-buttom{
