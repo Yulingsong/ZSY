@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baseInfo</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/billrelease.css">
+    <script src="../js/jquery.js"></script>
+    <style type="text/css">
+        .baseinfo-mt{
+            width: 820px;
+            height: 40px;
+            margin-left: 26px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .baseinfo-mt-title{
+            width: 300px;
+            height: 40px;
+            /*margin-left: 60px;*/
+            /*background-color: orange;*/
+        }
+        .baseinfo-mt-title .baseinfo-mt-menu-l{
+            list-style:none;
+        }
+        .baseinfo-mt-title .baseinfo-mt-menu-l li{
+            float: left;
+            width: 100px;
+            height: 20px;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+            color: #666;
+            cursor:pointer;
+        }
+        .baseinfo-mt-title .baseinfo-mt-menu-l li.baseinfo-mt-sel{
+            color:#ff6445;
+        }
+        .baseinfo-mt-cib-blp{
+            border-right: 1px solid #cccccc;
+        }
+        .baseinfo-mt-mian{
+            width: 820px;
+            height: 600px;
+            /*background-color: orange;*/
+            margin-top: 30px;
+            margin-left: 26px;
+        }
+        .baseinfo-mt-rows{
+            width: 820px;
+            height: 32px;
+            margin-top: 12px;
+            /*background-color: orange;*/
+        }
+        .baseinfo-mt-mri{
+            width: 185px;
+            height: 32px;
+            font-size: 14px;
+            line-height: 32px;
+            color: #666;
+            /*background-color: lightcyan;*/
+        }
+        .baseinfo-mt-mri span{
+            color: #ff6445;
+        }
+        .baseinfo-mt-rows input{
+            float: left;
+            width: 260px;
+            height: 30px;
+            margin-left: 12px;
+            border: 1px solid #cccccc;
+            text-indent: 10px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #666666;
+        }
+        .baseinfo-mt-mralert{
+            float: left;
+            width: 20px;
+            height: 20px;margin-left: 12px;
+            margin-top: 5px;
+            background: url("../images/info.png")no-repeat center center;
+            background-size: 20px 20px;
+        }
+        .baseinfo-mt-mrmsg{
+            float: left;
+            width: 260px;
+            height: 32px;
+            text-align: left;
+            margin-left: 8px;
+            font-size: 12px;
+            line-height: 30px;
+            color: #999999;
+        }
+        .special-mt-rows{
+            height: 180px;
+            /*background-color: lightcyan;*/
+        }
+        .special-mrlh{
+            line-height: 100px;
+        }
+        .baseinfo-mt-pict{
+            width: 370px;
+            height: 180px;
+            margin-left: 12px;
+            text-align: center;
+            line-height: 180px;
+            font-size: 14px;
+            border: 1px solid #cccccc;
+        }
+        .select-sheng{
+            float: left;
+            width: 88px;
+            height: 28px;
+            margin-left: 12px;
+        }
+        .select-sheng-s{
+            width: 88px;
+            height: 28px;
+        }
+        .baseinfo-mt-bbb{
+            width: 185px;
+            height: 34px;
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 32px;
+            color: #666;
+        }
+        .baseinfo-mt-submit{
+            width: 105px;
+            height: 34px;
+            margin-left: 197px;
+            font-size: 14px;
+            line-height: 34px;
+            text-align: center;
+            background-color: #ff4c55;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .baseinfo-mt-submit:hover{
+            background-color: #ec252f;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $(".baseinfo-mt-title .baseinfo-mt-menu-l li").click(function () {
+                $(this).siblings().removeClass();
+                $(this).addClass("baseinfo-mt-sel");
+                document.getElementById("sw").style.borderRight="1px solid #ccc";
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="nav">
+    <div class="top-nav-up">
+        <div class="top-nav-inner">
+            <div class="fl tal inner-phone">客服电话:400-8888-888</div>
+            <div class="fl tal inner-tradetime">交易时间:上午8:00-下午16:30(工作日)</div>
+            <div class="fr tar inner-hello">您好,欢迎来到票据交易中心</div>
+        </div>
+    </div>
+    <div class="top-nav-down">
+        <div class="top-nav-inner2">
+            <div class="fl tac nav-logo">
+                <img src="../images/LOGO(1).png">
+            </div>
+            <div>
+
+            </div>
+            <div class="fr tar nav-account">
+                <div class="fl tac account-name">张三,您好 &nbsp&nbsp<img src="../images/info-center.png"></div>
+                <div class="fr tac account-quit">退出</div>
+            </div>
+
+            <div class="fr menu">
+                <ul>
+                    <a href="#" class="af">首页</a>
+                    <a href="#">我要贴现</a>
+                    <a href="#">我要收票</a>
+                    <a href="#">我的账号</a>
+                    <a href="#">帮助中心</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="tac fl cl-menu c-w">
+        <div class="cl-menu-dis">
+            <!--<img src="">-->
+            <div>我要贴现</div>
+        </div>
+        <div class="tac cl-menu-fun bgc-b c-w">发布票据</div>
+        <div class="tac cl-menu-fun c-b">库存管理</div>
+        <div class="tac cl-menu-fun c-b">已发布票据</div>
+        <div class="tac cl-menu-fun c-b">我的交易</div>
+    </div>
+    <div class="fr cr-main">
+        <div class="baseinfo-mt">
+            <div class="baseinfo-mt-title">
+                <ul class="baseinfo-mt-menu-l">
+                    <li class="baseinfo-mt-sel baseinfo-mt-cib-blp" id="sw">票据正面</li>
+                    <li>票据背面</li>
+                </ul>
+            </div>
+        </div>
+        <div class="baseinfo-mt-mian">
+            <div class="baseinfo-mt-rows">
+                <div class="fl tar baseinfo-mt-mri">企业名称<span>*</span></div>
+                <input type="text" value="中顺易股份有限公司">
+                <div class="baseinfo-mt-mralert"></div>
+                <div class="baseinfo-mt-mrmsg">填写正确的企业名称有利于增加客户信任感</div>
+            </div>
+            <div class="baseinfo-mt-rows">
+                <div class="fl tar baseinfo-mt-mri">营业牌照号<span>*</span></div>
+                <input type="text" value="12312312312312">
+                <div class="baseinfo-mt-mralert"></div>
+                <div class="baseinfo-mt-mrmsg">请输入营业执照号码</div>
+            </div>
+            <div class="baseinfo-mt-rows">
+                <div class="fl tar baseinfo-mt-mri">组织机构代码<span>*</span></div>
+                <input type="text" value="12312313123">
+                <div class="baseinfo-mt-mralert"></div>
+                <div class="baseinfo-mt-mrmsg">请输入组织机构代码</div>
+            </div>
+            <div class="baseinfo-mt-rows special-mt-rows">
+                <div class="fl tar baseinfo-mt-mri special-mrlh">企业名称<span>*</span></div>
+                <div class="fl baseinfo-mt-pict">执照影像</div>
+            </div>
+            <div class="baseinfo-mt-rows">
+                <div class="fl tar baseinfo-mt-mri">所属城市<span>*</span></div>
+                <div class="select-sheng">
+                    <select class="select-sheng-s">
+                        <option value ="1">江苏省</option>
+                        <option value ="2">上海市</option>
+                        <option value="3">广东省</option>
+                    </select>
+                </div>
+                <div class="select-sheng">
+                    <select class="select-sheng-s">
+                        <option value ="1">南京市</option>
+                        <option value ="2">深圳</option>
+                        <option value="3">东莞</option>
+                    </select>
+                </div>
+            </div>
+            <div class="baseinfo-mt-bbb">
+                <div class="baseinfo-mt-submit">确认修改</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="buttom">
+    <div class="buttom-inner">
+        <div class="fl buttom-l">
+            <div class="fr buttom-menu">
+                <img src="../images/security.png">
+                <ul>
+                    <a href="#" class="bm-l-title">安全保障</a>
+                    <a href="#">会员资质</a>
+                    <a href="#">资金安全</a>
+                    <a href="#">交易安全</a>
+                    <a href="#">网络安全</a>
+                </ul>
+            </div>
+            <div class="fr buttom-menu">
+                <img src="../images/help.png">
+                <ul>
+                    <a href="#" class="bm-l-title">帮助中心</a>
+                    <a href="#">我是卖方</a>
+                    <a href="#">我是买方</a>
+                    <a href="#">常用知识</a>
+                </ul>
+            </div>
+            <div class="fr buttom-menu">
+                <img src="../images/info.png">
+                <ul>
+                    <a href="#" class="bm-l-title">关于我们</a>
+                    <a href="#">关于中顺易</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">网站公告</a>
+                </ul>
+            </div>
+        </div>
+        <div class="fr buttom-r">
+            <div class="fl buttom-menu-ro">
+                <img src="../images/phone.png">
+                <ul>
+                    <a href="" class="bm-r-title">客服电话:</a>
+                    <a href="">400-8888-888</a>
+                </ul>
+            </div>
+            <div class="fl buttom-menu-rt">
+                <img src="../images/time.png">
+                <ul>
+                    <a href="" class="bm-r-title">交易时间:</a>
+                    <a href="">上午8:00-下午16:30(工作日)</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

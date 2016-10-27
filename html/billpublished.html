@@ -53,8 +53,16 @@
             var a = document.getElementById("alert-public");
             a.style.display = "none";
         }
+        function hidebgalerttwo(){
+            var a = document.getElementById("alert-two");
+            a.style.display = "none";
+        }
         function shownotice(){
             var a = document.getElementById("alert-public");
+            a.style.display = "block";
+        }
+        function shownoticetwo(){
+            var a = document.getElementById("alert-two");
             a.style.display = "block";
         }
     </script>
@@ -181,7 +189,7 @@
                             </div>
                             <div class="fl bill-iblr">
                                 <div class="fr tac bill-iblr-btn" onclick="shownotice()">查看</div>
-                                <div class="fr tac bill-iblr-btn">修改</div>
+                                <div class="fr tac bill-iblr-btn" onclick="shownoticetwo()">修改</div>
                                 <div class="fr tac bill-iblr-btn">选择竞价方</div>
                             </div>
                         </div>
@@ -311,6 +319,20 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<div class="alert-public" id="alert-two">
+    <div class="alert-msg">
+
+        <div class="alert-top">
+            <div class="alert-top-name">竞价信息</div>
+        </div>
+        <div class="alert-two-title">发布后,待平台审核完成即可进入竞价环节</div>
+        <div class="alert-two-btns">
+            <div class="fl alert-two-btn" onclick="hidebgalerttwo()">确认</div>
+            <div class="fr alert-two-btn" onclick="hidebgalerttwo()">取消</div>
+        </div>
     </div>
 </div>
 

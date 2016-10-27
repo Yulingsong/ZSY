@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>accountInfo</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/billrelease.css">
+    <script src="../js/jquery.js"></script>
+    <style type="text/css">
+        .baseinfo-mt{
+            width: 820px;
+            height: 40px;
+            margin-left: 26px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .baseinfo-mt-title{
+            width: 300px;
+            height: 40px;
+            /*margin-left: 60px;*/
+            /*background-color: orange;*/
+        }
+        .baseinfo-mt-title .baseinfo-mt-menu-l{
+            list-style:none;
+        }
+        .baseinfo-mt-title .baseinfo-mt-menu-l li{
+            float: left;
+            width: 100px;
+            height: 20px;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+            color: #666;
+            cursor:pointer;
+        }
+        .baseinfo-mt-title .baseinfo-mt-menu-l li.baseinfo-mt-sel{
+            color:#ff6445;
+        }
+        .baseinfo-mt-cib-blp{
+            border-left: 1px solid #cccccc;
+        }
+        .baseinfo-mt-mian{
+            width: 820px;
+            height: 600px;
+            /*background-color: orange;*/
+            margin-left: 26px;
+        }
+        .baseinfo-mt-mri span{
+            color: #ff6445;
+        }
+        .baseinfo-mt-rows input{
+            float: left;
+            width: 260px;
+            height: 30px;
+            margin-left: 12px;
+            border: 1px solid #cccccc;
+            text-indent: 10px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #666666;
+        }
+        .account-info-left{
+            float: left;
+            width: 225px;
+            height: 300px;
+
+        }
+        .account-icon{
+            width: 140px;
+            height: 140px;
+            margin-top: 34px;
+            margin-left: 48px;
+            background-color: #eeeeee;
+            border-radius: 70px;
+        }
+        .account-info-right{
+            float: left;
+            width: 400px;
+            height: 300px;
+            margin-left: 20px;
+            /*background-color: orange;*/
+        }
+        .account-ir-rows{
+            float: left;
+            width: 400px;
+            height: 60px;
+            margin-top: 30px;
+            /*background-color: lightcyan;*/
+        }
+        .rh{
+            height: 86px;
+        }
+        .account-irr-l{
+            float: left;
+            width: 120px;
+            height: 60px;
+            font-size: 16px;
+            color: #666666;
+            /*background-color: lightcoral;*/
+        }
+        .account-irr-r{
+            float: left;
+            width: 280px;
+            height: 60px;
+            /*background-color: lavenderblush;*/
+        }
+        .account-irrr-t{
+            width: 280px;
+            height: 16px;
+            margin-bottom: 18px;
+            text-align: left;
+            font-size: 14px;
+            line-height: 16px;
+            color: #666666;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $(".baseinfo-mt-title .baseinfo-mt-menu-l li").click(function () {
+                $(this).siblings().removeClass();
+                $(this).addClass("baseinfo-mt-sel");
+                document.getElementById("sw").style.borderLeft="1px solid #ccc";
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="nav">
+    <div class="top-nav-up">
+        <div class="top-nav-inner">
+            <div class="fl tal inner-phone">客服电话:400-8888-888</div>
+            <div class="fl tal inner-tradetime">交易时间:上午8:00-下午16:30(工作日)</div>
+            <div class="fr tar inner-hello">您好,欢迎来到票据交易中心</div>
+        </div>
+    </div>
+    <div class="top-nav-down">
+        <div class="top-nav-inner2">
+            <div class="fl tac nav-logo">
+                <img src="../images/LOGO(1).png">
+            </div>
+            <div>
+
+            </div>
+            <div class="fr tar nav-account">
+                <div class="fl tac account-name">张三,您好 &nbsp&nbsp<img src="../images/info-center.png"></div>
+                <div class="fr tac account-quit">退出</div>
+            </div>
+
+            <div class="fr menu">
+                <ul>
+                    <a href="#" class="af">首页</a>
+                    <a href="#">我要贴现</a>
+                    <a href="#">我要收票</a>
+                    <a href="#">我的账号</a>
+                    <a href="#">帮助中心</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="tac fl cl-menu c-w">
+        <div class="cl-menu-dis">
+            <!--<img src="">-->
+            <div>我要贴现</div>
+        </div>
+        <div class="tac cl-menu-fun bgc-b c-w">发布票据</div>
+        <div class="tac cl-menu-fun c-b">库存管理</div>
+        <div class="tac cl-menu-fun c-b">已发布票据</div>
+        <div class="tac cl-menu-fun c-b">我的交易</div>
+    </div>
+    <div class="fr cr-main">
+        <div class="baseinfo-mt">
+            <div class="baseinfo-mt-title">
+                <ul class="baseinfo-mt-menu-l">
+                    <li>票据正面</li>
+                    <li class="baseinfo-mt-sel baseinfo-mt-cib-blp" id="sw">票据背面</li>
+                </ul>
+            </div>
+        </div>
+        <div class="baseinfo-mt-mian">
+            <div class="account-info-left">
+                <div class="account-icon"></div>
+            </div>
+            <div class="account-info-right">
+                <div class="account-ir-rows">
+                    <div class="account-irr-l">注册信息</div>
+                    <div class="account-irr-r">
+                        <div class="account-irrr-t">注册时间 : 2016/09/07 12/09/20</div>
+                        <div class="account-irrr-t">最后登录时间 : 2016/09/07 12/09/20</div>
+                    </div>
+                </div>
+                <div class="account-ir-rows rh">
+                    <div class="account-irr-l">账户信息</div>
+                    <div class="account-irr-r rh">
+                        <div class="account-irrr-t">账户名称 : 电票交易专用账户</div>
+                        <div class="account-irrr-t">开户银行 : 浦发银行深圳分行</div>
+                        <div class="account-irrr-t">虚拟账号 : 9999999999999999999999</div>
+                    </div>
+                </div>
+                <div class="account-ir-rows">
+                    <div class="account-irr-l">员工信息</div>
+                    <div class="account-irr-r">
+                        <div class="account-irrr-t">员工姓名 : 张三</div>
+                        <div class="account-irrr-t">手机号码 : 13988888888</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="buttom">
+    <div class="buttom-inner">
+        <div class="fl buttom-l">
+            <div class="fr buttom-menu">
+                <img src="../images/security.png">
+                <ul>
+                    <a href="#" class="bm-l-title">安全保障</a>
+                    <a href="#">会员资质</a>
+                    <a href="#">资金安全</a>
+                    <a href="#">交易安全</a>
+                    <a href="#">网络安全</a>
+                </ul>
+            </div>
+            <div class="fr buttom-menu">
+                <img src="../images/help.png">
+                <ul>
+                    <a href="#" class="bm-l-title">帮助中心</a>
+                    <a href="#">我是卖方</a>
+                    <a href="#">我是买方</a>
+                    <a href="#">常用知识</a>
+                </ul>
+            </div>
+            <div class="fr buttom-menu">
+                <img src="../images/info.png">
+                <ul>
+                    <a href="#" class="bm-l-title">关于我们</a>
+                    <a href="#">关于中顺易</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">网站公告</a>
+                </ul>
+            </div>
+        </div>
+        <div class="fr buttom-r">
+            <div class="fl buttom-menu-ro">
+                <img src="../images/phone.png">
+                <ul>
+                    <a href="" class="bm-r-title">客服电话:</a>
+                    <a href="">400-8888-888</a>
+                </ul>
+            </div>
+            <div class="fl buttom-menu-rt">
+                <img src="../images/time.png">
+                <ul>
+                    <a href="" class="bm-r-title">交易时间:</a>
+                    <a href="">上午8:00-下午16:30(工作日)</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
