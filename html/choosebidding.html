@@ -8,15 +8,69 @@
     <style type="text/css">
         .content{
             width:100%;
-            height: 1256px;
+            height: 1550px;
             margin: 0 auto;
             background-color: #fff;
-            border: 1px solid #dddddd;
+            /*border: 1px solid #dddddd;*/
         }
 
         .content-inner{
-
+            width: 1100px;
+            height: 1550px;
+            margin: 0 auto;
+            background-color: lightcyan;
         }
+        .cc-inner-top{
+            width: 1100px;
+            height: 72px;
+            margin: 0 auto;
+            /*background-color: olive;*/
+        }
+        .cc-inner-top-locate{
+            width: 500px;
+            height: 16px;
+            padding-top: 18px;
+            line-height: 16px;
+            font-size: 16px;
+            color: #666;
+            /*background-color: orange;*/
+        }
+        .cc-inner-top-back{
+            width: 84px;
+            height: 30px;
+            margin-right: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #666;
+            background-color: #eee;
+        }
+
+        .cc-inner-m{
+            width: 1100px;
+            height: 135px;
+            margin: 0 auto;
+            /*background-color: lightcoral;*/
+        }
+        .cc-bill-r{
+            width: 150px;
+            height: 45px;
+            margin-right: 10px;
+            font-size: 16px;
+            line-height: 45px;
+            color: #666;
+            background-color: #ececec;
+        }
+        .cc-bill-notice{
+            width: 500px;
+            height: 50px;
+            margin-top: 40px;
+            font-size: 18px;
+            line-height: 50px;
+            color: #ff6445;
+            /*background-color: #548ec9;*/
+        }
+
     </style>
 </head>
 <body>
@@ -56,7 +110,22 @@
 
 <div class="content" >
     <div class="content-inner">
+        <div class="cc-inner-top">
+            <div class="fl tal cc-inner-top-locate">当前位置 : 已发布票据 > 选择竞价方</div>
+            <div class="fr tac cc-inner-top-back" onclick="back()">返回</div>
+        </div>
+        <div class="cc-inner-m">
+            <div>
+                <div class="fl tac cc-bill-r">票据发布</div>
+                <div class="fl tac cc-bill-r">平台审核</div>
+                <div class="fl tac cc-bill-r">竞价中</div>
+                <div class="fl tac cc-bill-r">选择竞价方</div>
+            </div>
+            <div>
+                <div class="fl tal cc-bill-notice">请谨慎选择,确认竞价后不可更改</div>
+            </div>
 
+        </div>
     </div>
 </div>
 

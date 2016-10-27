@@ -20,8 +20,9 @@
     height: 90px;
     font-size: 20px;
     line-height: 90px;
-    background-color: #0098d7;
-    color: white;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    color: #333;
 }
 .cl-menu-fun{
     width: 229px;
@@ -31,7 +32,7 @@
     border-bottom: 1px solid #dddddd;
 }
 .c-b:hover{
-    background-color: #afe6ff;
+    background-color: #f0f0f0;
 }
 .cr-main-top{
     width: 870px;
@@ -109,13 +110,13 @@
     width: 120px;
     height: 38px;
     margin-right: 30px;
-    background-color: #00aeff;
+    background-color: #ff4c55;
     font-size: 14px;
     line-height: 38px;
     color: #fff;
 }
 .row-btn:hover{
-    background-color: #007ad8;
+    background-color: #ec252f;
 }
 
 .inner-row-title{
@@ -196,7 +197,7 @@
     text-align: center;
     font-size: 14px;
     line-height: 30px;
-    color: #ff7155;
+    color: #ff5050;
     text-indent:8px;
     border: 1px solid #aaaaaa;
     border-left: none;

@@ -1,56 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <script
-            src="https://code.jquery.com/jquery-1.8.2.min.js"
-            integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk="
-            crossorigin="anonymous"></script>
-    <script>
-        $(function() {
-
-            var asc = function(a, b) {
-                return $(a).find('input').val() > $(b).find('input').val() ? 1 : -1;
-            }
-
-            var desc = function(a, b) {
-                return $(a).find('input').val() > $(b).find('input').val() ? -1 : 1;
-            }
-
-            var sortByInput = function(sortBy) {
-                var sortEle = $('.container>div').sort(sortBy);
-                $('.container').empty().append(sortEle);
-            }
-
-            $('#desc').click(function() {
-                sortByInput(desc);
-            });
-
-            $('#asc').click(function() {
-                sortByInput(asc);
-            });
-        })
-
-    </script>
+    <meta charset="utf-8">
+    <meta name="author" content="http://www.zhimengzhe.com/" />
+    <title>织梦者</title>
+    <style>
+        .antzone{
+            float: left;
+            width:135px;
+            height:46px;
+            -webkit-transform:skew(20deg);
+            -moz-transform:skew(20deg);
+            -o-transform:skew(20deg);
+            -ms-transform:skew(20deg);
+            transform:skew(20deg);
+            background:#E5C3B2;
+        }
+        .antzone span{
+            display:inline-block;
+            -webkit-transform:skew(-20deg);
+        }
+        .antzone1{
+            float: left;
+            width: 135px;
+            font-size: 16px;
+            line-height: 46px;
+            color: #666;
+            border-bottom: 46px solid #eee;
+            border-right: 15px solid transparent;
+        }
+    </style>
 </head>
 <body>
-<div class='container'>
-    <div id='1'>
-        <!-- <div class='name'>bbbb</div> -->
-        <div class='number'><input type='text' value='110'/></div>
-    </div>
-    <div id='2'>
-        <!-- <div class='name'>cccc</div> -->
-        <div class='number'><input type='text' value='120'/></div>
-    </div>
-    <div id='3'>
-        <!-- <div class='name'>dddd</div> -->
-        <div class='number'><input type='text' value='140'/></div>
-    </div>
-</div>
+<div class="antzone1"><span>你好</span></div>
+<div class="antzone"><span>你好</span></div>
 
-<button id="desc">从大到小</button>
-<button id="asc">从小到大</button>
 </body>
-</html>
+</html><br>

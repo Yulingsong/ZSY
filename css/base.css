@@ -10,6 +10,7 @@ html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, l
 }
 body{
     background-color: #f8f8f8;
+    font-family: "Microsoft YaHei";
 }
 fieldset, img, input, button {
     border: none;
@@ -73,7 +74,7 @@ table {
     display: none
 }
 .bgc-b{
-    background-color: #36baf7;
+    background-color: #ec252f;
 }
 .c-b{
     color: #333333;
@@ -183,13 +184,13 @@ table {
     color: #333;
 }
 .menu a:hover{
-    background-color: #00bbee;
+    background-color: #ec252f;
     color: white;
 }
 .af{
     width: 60px !important;
     margin-left:0 !important;
-    background-color: #00bbee !important;
+    background-color: #ec252f !important;
     color: white !important;
 }
 
@@ -282,4 +283,88 @@ table {
     font-size: 16px !important;
     line-height: 16px !important;
     color: #656565 !important;
+}
+
+/*弹出框*/
+.alert-public{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 1160px;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.alert-msg{
+    position: relative;
+    width: 440px;
+    height: 328px;
+    margin: 0 auto;
+    margin-top: 280px;
+    background-color: #fff;
+}
+.v-alert-top{
+    width: 440px;
+    height: 49px;
+    border-bottom: 1px solid #999999;
+}
+.v-close{
+    cursor: pointer;
+    float: right;
+    width: 18px;
+    height: 18px;
+    margin-top: 16px;
+    margin-right: 16px;
+}
+.v-title{
+    /*width: 440px;*/
+    margin: 0 auto;
+    /*margin-top: 32px;*/
+    padding-top: 32px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 26px;
+    /*background-color: orange;*/
+    color: #333;
+}
+.v-buttom{
+    height: 66px;
+}
+.v-b{
+    float: left;
+    width: 220px;
+    height: 66px;
+    margin-top: 154px;
+    border: none;
+    background-color: orange;
+}
+.v-button-l{
+    cursor: pointer;
+    width: 220px;
+    height: 66px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    color: #666666;
+    background-color: #e8f0f9;
+    outline: none;
+}
+.v-button-l:hover{
+    color: #666666;
+    background-color: #d9e3ed;
+}
+.v-button-r{
+    cursor: pointer;
+    width: 220px;
+    height: 66px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #548ec9;
+    outline: none;
+}
+.v-button-r:hover{
+    color: #ffffff;
+    background-color: #4691dc;
 }

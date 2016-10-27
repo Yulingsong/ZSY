@@ -21,8 +21,9 @@
     height: 90px;
     font-size: 20px;
     line-height: 90px;
-    background-color: #0098d7;
-    color: white;
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 1px solid #dddddd;
 }
 .cl-menu-fun{
     width: 229px;
@@ -32,7 +33,7 @@
     border-bottom: 1px solid #dddddd;
 }
 .c-b:hover{
-    background-color: #afe6ff;
+    background-color: #f0f0f0;
 }
 .cr-main-topmenu{
     width: 834px;
@@ -105,15 +106,15 @@
 }
 .select-type-menu li.select-type-sel{
     color: #fff;
-    background-color: #00bbee;
+    background-color: #ff4c55;
 }
 .sort{
     width: 832px;
     height: 30px;
     margin-left: 18px;
     margin-top: 17px;
-    background-color: #edf5f9;
-    border: 1px solid #d2f1ff;
+    background-color: #ececec;
+    border: 1px solid #ececec;
 }
 
 .sort .sort-type{
@@ -142,19 +143,20 @@
     height: 200px;
     margin-left: 18px;
     margin-top: 10px;
-    border: 1px solid #c6eaff;
+    border: 1px solid #ececec;
 }
 .bill-info-top{
     width: 834px;
     height: 40px;
-    background-color: #c6eaff;
+    background-color: #ececec;
 }
 .bill-info-n{
-    width: 88px;
+    width: 100px;
     height: 40px;
     font-size: 14px;
     color: #666666;
     line-height: 40px;
+    /*background-color: orange;*/
 }
 .bill-info-no{
     width:200px;
@@ -190,7 +192,7 @@
     margin-top: 20px;
     margin-left: 16px;
     font-size: 14px;
-    color: #333;
+    color: #666;
     line-height: 20px;
     /*background-color: orange;*/
 }
@@ -199,7 +201,7 @@
     height: 20px;
     margin-top: 30px;
     margin-left: 16px;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     line-height: 20px;
     /*background-color: orange;*/
@@ -216,7 +218,7 @@
     margin-top: 20px;
     margin-left: 26px;
     font-size: 14px;
-    color: #333;
+    color: #666;
     line-height: 20px;
 }
 .bill-money-name{
@@ -224,7 +226,7 @@
     height: 20px;
     margin-top: 30px;
     margin-left: 26px;
-    font-size: 14px;
+    font-size: 16px;
     color: #ff5050;
     line-height: 20px;
 }
@@ -263,14 +265,14 @@
     margin-top: 7px;
     font-size: 14px;
     line-height: 34px;
-    background-color: #00aeff;
+    background-color: #ff4c55;
     color: white;
 }
 .btnmt{
     margin-top: 23px;
 }
 .bill-iblr-btn:hover{
-    background-color: #009de6;
+    background-color: #ec252f;
 }
 .pagination{
     width: 834px;
@@ -287,9 +289,9 @@
     text-align: center;
     font-size: 14px;
     line-height: 38px;
-    background-color: #f2f7fa;
+    background-color: #f7f7f7;
     color: #666;
-    border: 1px solid #c2dceb;
+    border: 1px solid #cfcfcf;
 }
 .page-no{
     float: left;
@@ -299,9 +301,9 @@
     text-align: center;
     font-size: 14px;
     line-height: 38px;
-    background-color: #f2f7fa;
+    background-color: #f7f7f7;
     color: #666;
-    border: 1px solid #c2dceb;
+    border: 1px solid #cfcfcf;
 }
 .page-s{
     float: left;

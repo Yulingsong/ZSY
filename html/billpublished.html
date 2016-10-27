@@ -10,6 +10,7 @@
     <style type="text/css">
 
     </style>
+
     <script type="text/javascript">
         $(function () {
             $(".menu-l li").click(function () {
@@ -48,241 +49,270 @@
             });
         })
 
-        function clickget(){
-            window.open("alert.html", "newwindow", "height=500, width=300,top=300,left=300, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no");
+        function hidebgalert(){
+            var a = document.getElementById("alert-public");
+            a.style.display = "none";
+        }
+        function shownotice(){
+            var a = document.getElementById("alert-public");
+            a.style.display = "block";
         }
     </script>
 </head>
 <body>
-<div class="nav">
-    <div class="top-nav-up">
-        <div class="top-nav-inner">
-            <div class="fl tal inner-phone">客服电话:400-8888-888</div>
-            <div class="fl tal inner-tradetime">交易时间:上午8:00-下午16:30(工作日)</div>
-            <div class="fr tar inner-hello">您好,欢迎来到票据交易中心</div>
-        </div>
-    </div>
-    <div class="top-nav-down">
-        <div class="top-nav-inner2">
-            <div class="fl tac nav-logo">
-                <img src="../images/LOGO(1).png">
-            </div>
-            <div>
-
-            </div>
-            <div class="fr tar nav-account">
-                <div class="fl tac account-name">张三,您好 &nbsp&nbsp<img src="../images/info-center.png"></div>
-                <div class="fr tac account-quit">退出</div>
-            </div>
-
-            <div class="fr menu">
-                <ul>
-                    <a href="#" class="af">首页</a>
-                    <a href="#">我要贴现</a>
-                    <a href="#">我要收票</a>
-                    <a href="#">我的账号</a>
-                    <a href="#">帮助中心</a>
-                </ul>
+<div>
+    <div class="nav">
+        <div class="top-nav-up">
+            <div class="top-nav-inner">
+                <div class="fl tal inner-phone">客服电话:400-8888-888</div>
+                <div class="fl tal inner-tradetime">交易时间:上午8:00-下午16:30(工作日)</div>
+                <div class="fr tar inner-hello">您好,欢迎来到票据交易中心</div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="content">
-
-    <div class="tac fl cl-menu c-w">
-        <div class="cl-menu-dis">
-            <img src="">
-            <div>我要贴现</div>
-        </div>
-        <div class="tac cl-menu-fun c-b">发布票据</div>
-        <div class="tac cl-menu-fun c-b">库存管理</div>
-        <div class="tac cl-menu-fun bgc-b  c-w">已发布票据</div>
-        <div class="tac cl-menu-fun c-b">我的交易</div>
-    </div>
-
-    <div class="fr cr-main">
-        <div class="cr-main-topmenu">
-            <ul class="menu-l">
-                <li class="sel sw" id="sw">已发布票据</li>
-                <li>待审核</li>
-                <li>竞价中</li>
-                <li>待付款</li>
-                <li>待背书</li>
-            </ul>
-        </div>
-
-        <div class="select-people">
-            <div class="select-type">
-                <div class="tac type-title">承兑人类型:</div>
-                <ul class="select-type-menu">
-                    <li class="select-type-sel">全部</li>
-                    <li>国有</li>
-                    <li>私营</li>
-                    <li>集体</li>
-                </ul>
-            </div>
-            <div class="select-type">
-                <div class="tac type-title">承兑人金额:</div>
-                <ul class="select-type-menu">
-                    <li class="select-type-sel">全部</li>
-                    <li>10万以下</li>
-                    <li>100万以下</li>
-                    <li>100万-500万</li>
-                    <li>500万以上</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="sort">
-            <div class="fl tac sort-type">默认</div>
-            <div class="fl tac sort-type" id="desc">金额</div>
-            <div class="fl tac sort-type">到期日</div>
-            <div class="fl tac sort-type">剩余天数</div>
-            <div class="fr tar info-amount">共<span>8888</span>条票据信息</div>
-        </div>
-
-        <div class="sorting">
-            <div class="bill-info" id="1">
-                <input type="hidden" value="100000">
-                <div class="bill-info-top">
-                    <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
-                    <div class="fl tal bill-info-no">88888888888888888888888</div>
-                    <div class="fr tar expect-m">期望成交价: <span id="number">100,000</span>元</div>
+        <div class="top-nav-down">
+            <div class="top-nav-inner2">
+                <div class="fl tac nav-logo">
+                    <img src="../images/LOGO(1).png">
                 </div>
-                <div class="bill-info-buttom">
-                    <div class="fl bill-ibl">
-                        <div class="tal bill-bank">承兑行/人</div>
-                        <div class="tal bill-bank-name">中石油股份有限公司</div>
+                <div>
+
+                </div>
+                <div class="fr tar nav-account">
+                    <div class="fl tac account-name">张三,您好 &nbsp&nbsp<img src="../images/info-center.png"></div>
+                    <div class="fr tac account-quit">退出</div>
+                </div>
+
+                <div class="fr menu">
+                    <ul>
+                        <a href="#" class="af">首页</a>
+                        <a href="#">我要贴现</a>
+                        <a href="#">我要收票</a>
+                        <a href="#">我的账号</a>
+                        <a href="#">帮助中心</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="tac fl cl-menu c-w">
+            <div class="cl-menu-dis">
+                <!--<img src="">-->
+                <div>我要贴现</div>
+            </div>
+            <div class="tac cl-menu-fun c-b">发布票据</div>
+            <div class="tac cl-menu-fun c-b">库存管理</div>
+            <div class="tac cl-menu-fun bgc-b  c-w">已发布票据</div>
+            <div class="tac cl-menu-fun c-b">我的交易</div>
+        </div>
+
+        <div class="fr cr-main">
+            <div class="cr-main-topmenu">
+                <ul class="menu-l">
+                    <li class="sel sw" id="sw">已发布票据</li>
+                    <li>待审核</li>
+                    <li>竞价中</li>
+                    <li>待付款</li>
+                    <li>待背书</li>
+                </ul>
+            </div>
+
+            <div class="select-people">
+                <div class="select-type">
+                    <div class="tac type-title">承兑人类型:</div>
+                    <ul class="select-type-menu">
+                        <li class="select-type-sel">全部</li>
+                        <li>国有</li>
+                        <li>私营</li>
+                        <li>集体</li>
+                    </ul>
+                </div>
+                <div class="select-type">
+                    <div class="tac type-title">承兑人金额:</div>
+                    <ul class="select-type-menu">
+                        <li class="select-type-sel">全部</li>
+                        <li>10万以下</li>
+                        <li>100万以下</li>
+                        <li>100万-500万</li>
+                        <li>500万以上</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sort">
+                <div class="fl tac sort-type">默认</div>
+                <div class="fl tac sort-type" id="desc">金额</div>
+                <div class="fl tac sort-type">到期日</div>
+                <div class="fl tac sort-type">剩余天数</div>
+                <div class="fr tar info-amount">共<span>8888</span>条票据信息</div>
+            </div>
+
+            <div class="sorting">
+                <div class="bill-info" id="1">
+                    <input type="hidden" value="100000">
+                    <div class="bill-info-top">
+                        <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
+                        <div class="fl tal bill-info-no">88888888888888888888888</div>
+                        <div class="fr tar expect-m">期望成交价: <span id="number">100,000</span>元</div>
                     </div>
-                    <div class="fl bill-ibt">
-                        <div class="tal bill-money">承兑行/人</div>
-                        <div class="tal bill-money-name">100,000元</div>
-                    </div>
-                    <div class="fl bill-ibth">
-                        <div class="tal bill-money">票据到期日</div>
-                        <div class="tal textb bill-money-name">2017-09-08</div>
-                    </div>
-                    <div class="fl bill-ibf">
-                        <div class="fl bill-ibll">
+                    <div class="bill-info-buttom">
+                        <div class="fl bill-ibl">
+                            <div class="tal bill-bank">承兑行/人</div>
+                            <div class="tal bill-bank-name">中石油股份有限公司</div>
+                        </div>
+                        <div class="fl bill-ibt">
                             <div class="tal bill-money">承兑行/人</div>
-                            <div class="tal textb bill-money-name">4</div>
+                            <div class="tal bill-money-name">100,000元</div>
                         </div>
-                        <div class="fl bill-iblc">
-                            <div class="tal bill-money">交易状态</div>
-                            <div class="tal bill-money-name">待审核</div>
+                        <div class="fl bill-ibth">
+                            <div class="tal bill-money">票据到期日</div>
+                            <div class="tal textb bill-money-name">2017-09-08</div>
                         </div>
-                        <div class="fl bill-iblr">
-                            <div class="fr tac bill-iblr-btn">查看</div>
-                            <div class="fr tac bill-iblr-btn">修改</div>
-                            <div class="fr tac bill-iblr-btn">选择竞价方</div>
+                        <div class="fl bill-ibf">
+                            <div class="fl bill-ibll">
+                                <div class="tal bill-money">承兑行/人</div>
+                                <div class="tal textb bill-money-name">4</div>
+                            </div>
+                            <div class="fl bill-iblc">
+                                <div class="tal bill-money">交易状态</div>
+                                <div class="tal bill-money-name">待审核</div>
+                            </div>
+                            <div class="fl bill-iblr">
+                                <div class="fr tac bill-iblr-btn" onclick="shownotice()">查看</div>
+                                <div class="fr tac bill-iblr-btn">修改</div>
+                                <div class="fr tac bill-iblr-btn">选择竞价方</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="bill-info" id="2">
-                <input type="hidden" value="880000">
-                <div class="bill-info-top">
-                    <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
-                    <div class="fl tal bill-info-no">88888888888888888888888</div>
-                    <div class="fr tar expect-m">期望成交价: <span id="number1">880,000</span>元</div>
-                </div>
-                <div class="bill-info-buttom">
-                    <div class="fl bill-ibl">
-                        <div class="tal bill-bank">承兑行/人</div>
-                        <div class="tal bill-bank-name">中石油股份有限公司</div>
+
+                <div class="bill-info" id="2">
+                    <input type="hidden" value="880000">
+                    <div class="bill-info-top">
+                        <div class="fl tar bill-info-n">票据号码&nbsp&nbsp:</div>
+                        <div class="fl tal bill-info-no">88888888888888888888888</div>
+                        <div class="fr tar expect-m">期望成交价: <span id="number1">880,000</span>元</div>
                     </div>
-                    <div class="fl bill-ibt">
-                        <div class="tal bill-money">承兑行/人</div>
-                        <div class="tal bill-money-name">880,000元</div>
-                    </div>
-                    <div class="fl bill-ibth">
-                        <div class="tal bill-money">票据到期日</div>
-                        <div class="tal textb bill-money-name">2016-10-26</div>
-                    </div>
-                    <div class="fl bill-ibf">
-                        <div class="fl bill-ibll">
+                    <div class="bill-info-buttom">
+                        <div class="fl bill-ibl">
+                            <div class="tal bill-bank">承兑行/人</div>
+                            <div class="tal bill-bank-name">中石油股份有限公司</div>
+                        </div>
+                        <div class="fl bill-ibt">
                             <div class="tal bill-money">承兑行/人</div>
-                            <div class="tal textb bill-money-name">2</div>
+                            <div class="tal bill-money-name">880,000元</div>
                         </div>
-                        <div class="fl bill-iblc">
-                            <div class="tal bill-money">交易状态</div>
-                            <div class="tal bill-money-name">待审核</div>
+                        <div class="fl bill-ibth">
+                            <div class="tal bill-money">票据到期日</div>
+                            <div class="tal textb bill-money-name">2016-10-26</div>
                         </div>
-                        <div class="fl bill-iblr">
-                            <div class="fr tac bill-iblr-btn btnmt">查看</div>
-                            <div class="fr tac bill-iblr-btn">修改</div>
+                        <div class="fl bill-ibf">
+                            <div class="fl bill-ibll">
+                                <div class="tal bill-money">承兑行/人</div>
+                                <div class="tal textb bill-money-name">2</div>
+                            </div>
+                            <div class="fl bill-iblc">
+                                <div class="tal bill-money">交易状态</div>
+                                <div class="tal bill-money-name">待审核</div>
+                            </div>
+                            <div class="fl bill-iblr">
+                                <div class="fr tac bill-iblr-btn btnmt">查看</div>
+                                <div class="fr tac bill-iblr-btn">修改</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="pagination">
+                <div class="page-text page-f">首页</div>
+                <div class="page-text">上一页</div>
+                <div class="page-no">1</div>
+                <div class="page-no">2</div>
+                <div class="page-no">3</div>
+                <div class="page-no">4</div>
+                <div class="page-s">...</div>
+                <div class="page-no">10</div>
+                <div class="page-text">下一页</div>
+                <div class="page-text">尾页</div>
+            </div>
         </div>
-        <div class="pagination">
-            <div class="page-text page-f">首页</div>
-            <div class="page-text">上一页</div>
-            <div class="page-no">1</div>
-            <div class="page-no">2</div>
-            <div class="page-no">3</div>
-            <div class="page-no">4</div>
-            <div class="page-s">...</div>
-            <div class="page-no">10</div>
-            <div class="page-text">下一页</div>
-            <div class="page-text">尾页</div>
+    </div>
+
+
+    <div class="buttom">
+        <div class="buttom-inner">
+            <div class="fl buttom-l">
+                <div class="fr buttom-menu">
+                    <img src="../images/security.png">
+                    <ul>
+                        <a href="#" class="bm-l-title">安全保障</a>
+                        <a href="#">会员资质</a>
+                        <a href="#">资金安全</a>
+                        <a href="#">交易安全</a>
+                        <a href="#">网络安全</a>
+                    </ul>
+                </div>
+                <div class="fr buttom-menu">
+                    <img src="../images/help.png">
+                    <ul>
+                        <a href="#" class="bm-l-title">帮助中心</a>
+                        <a href="#">我是卖方</a>
+                        <a href="#">我是买方</a>
+                        <a href="#">常用知识</a>
+                    </ul>
+                </div>
+                <div class="fr buttom-menu">
+                    <img src="../images/info.png">
+                    <ul>
+                        <a href="#" class="bm-l-title">关于我们</a>
+                        <a href="#">关于中顺易</a>
+                        <a href="#">联系我们</a>
+                        <a href="#">网站公告</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="fr buttom-r">
+                <div class="fl buttom-menu-ro">
+                    <img src="../images/phone.png">
+                    <ul>
+                        <a href="" class="bm-r-title">客服电话:</a>
+                        <a href="">400-8888-888</a>
+                    </ul>
+                </div>
+                <div class="fl buttom-menu-rt">
+                    <img src="../images/time.png">
+                    <ul>
+                        <a href="" class="bm-r-title">交易时间:</a>
+                        <a href="">上午8:00-下午16:30(工作日)</a>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-
-<div class="buttom">
-    <div class="buttom-inner">
-        <div class="fl buttom-l">
-            <div class="fr buttom-menu">
-                <img src="../images/security.png">
-                <ul>
-                    <a href="#" class="bm-l-title">安全保障</a>
-                    <a href="#">会员资质</a>
-                    <a href="#">资金安全</a>
-                    <a href="#">交易安全</a>
-                    <a href="#">网络安全</a>
-                </ul>
-            </div>
-            <div class="fr buttom-menu">
-                <img src="../images/help.png">
-                <ul>
-                    <a href="#" class="bm-l-title">帮助中心</a>
-                    <a href="#">我是卖方</a>
-                    <a href="#">我是买方</a>
-                    <a href="#">常用知识</a>
-                </ul>
-            </div>
-            <div class="fr buttom-menu">
-                <img src="../images/info.png">
-                <ul>
-                    <a href="#" class="bm-l-title">关于我们</a>
-                    <a href="#">关于中顺易</a>
-                    <a href="#">联系我们</a>
-                    <a href="#">网站公告</a>
-                </ul>
+<div class="alert-public" id="alert-public">
+    <div class="alert-msg">
+        <div class="v-alert-top">
+            <div class="v-close" onclick="hidebgalert()">
+                <img src="../images/close.png">
             </div>
         </div>
-        <div class="fr buttom-r">
-            <div class="fl buttom-menu-ro">
-                <img src="../images/phone.png">
-                <ul>
-                    <a href="" class="bm-r-title">客服电话:</a>
-                    <a href="">400-8888-888</a>
-                </ul>
+        <div class="v-main" id="v-alert">
+            <div class="v-title">确认删除吗?</div>
+        </div>
+        <div class="v-buttom">
+            <div class="v-b">
+                <input type="button" class="v-button-l" id="btn-l" value="确定" onclick="getvcode()" />
             </div>
-            <div class="fl buttom-menu-rt">
-                <img src="../images/time.png">
-                <ul>
-                    <a href="" class="bm-r-title">交易时间:</a>
-                    <a href="">上午8:00-下午16:30(工作日)</a>
-                </ul>
+            <div class="v-b">
+                <input type="button" class="v-button-r" id="btn-r" value="取消" onclick="confirm(this)" />
             </div>
         </div>
     </div>
 </div>
+
 </body>
 </html>
