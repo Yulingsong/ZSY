@@ -12,8 +12,11 @@
     border-right: 1px solid #dddddd;
 }
 .cr-main{
-    width: 870px;
+    float: left;
+    width: 850px;
     height: 1256px;
+    margin: 0 auto;
+    /*background-color: lightblue;*/
 }
 .cl-menu-dis{
     width: 229px;
