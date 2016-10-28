@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>registered</title>
+    <title>fillInfo</title>
     <link rel="stylesheet" href="../css/base.css">
     <script src="../js/jquery.js"></script>
     <style type="text/css">
@@ -11,9 +11,8 @@
         }
         .content{
             width: 1100px;
-            height: 700px;
+            height: 600px;
             margin: 0 auto;
-            /*background-color: orange;*/
         }
         .reg-top{
             width: 1098px;
@@ -89,106 +88,117 @@
         .reg-mtm-whitetext{
             color: #fff;
         }
-        .reg-fillinfo{
-            width: 850px;
-            height: 600px;
+        .reg-fill-info{
+            width: 750px;
+            height: 400px;
             margin: 0 auto;
             margin-top: 30px;
         }
-        .baseinfo-mt-rows{
-            width: 800px;
+        .reg-fi-rows{
+            width: 750px;
             height: 32px;
-            margin: 0 auto;
-            margin-top: 12px;
-            /*background-color: lightblue;*/
+            margin-bottom: 12px;
         }
-        .baseinfo-mt-mri{
-            width: 185px;
+        .reg-fi-rows-b{
+            width: 750px;
+            height: 34px;
+            margin-bottom: 12px;
+        }
+        .reg-fi-title{
+            float: left;
+            width: 235px;
             height: 32px;
+            text-align: right;
             font-size: 14px;
             line-height: 32px;
             color: #666;
-            /*background-color: lightcyan;*/
         }
-        .baseinfo-mt-mri span{
+        .reg-fi-title span{
             color: #ff6445;
         }
-        .baseinfo-mt-rows input{
+        .reg-fi-input{
             float: left;
             width: 260px;
             height: 30px;
             margin-left: 12px;
-            border: 1px solid #cccccc;
-            text-indent: 10px;
-            font-size: 14px;
-            line-height: 30px;
-            color: #666666;
+            border: 1px solid #aaa;
         }
-        .baseinfo-mt-mralert{
-            float: left;
-            width: 20px;
-            height: 20px;margin-left: 12px;
-            margin-top: 5px;
-            background: url("../images/info.png")no-repeat center center;
-            background-size: 20px 20px;
-        }
-        .baseinfo-mt-mrmsg{
-            float: left;
+        .reg-fi-input input{
             width: 260px;
-            height: 32px;
-            text-align: left;
-            margin-left: 8px;
-            font-size: 12px;
+            height: 30px;
+            font-size: 14px;
             line-height: 30px;
-            color: #999999;
-        }
-        .special-mt-rows{
-            height: 180px;
-            /*background-color: lightcyan;*/
-        }
-        .special-mrlh{
-            line-height: 100px;
-        }
-        .baseinfo-mt-pict{
-            width: 370px;
-            height: 180px;
-            margin-left: 12px;
-            text-align: center;
-            line-height: 180px;
-            font-size: 14px;
-            border: 1px solid #cccccc;
-        }
-        .select-sheng{
-            float: left;
-            width: 88px;
-            height: 28px;
-            margin-left: 12px;
-        }
-        .select-sheng-s{
-            width: 88px;
-            height: 28px;
-        }
-        .baseinfo-mt-bbb{
-            width: 185px;
-            height: 34px;
-            margin-top: 12px;
-            font-size: 14px;
-            line-height: 32px;
+            text-align: left;
+            text-indent: 10px;
             color: #666;
+            border: none;
         }
-        .baseinfo-mt-submit{
-            width: 105px;
-            height: 34px;
-            margin-left: 223px;
+        .reg-fi-input-s{
+            float: left;
+            width: 160px;
+            height: 30px;
+            margin-left: 12px;
+            border: 1px solid #aaa;
+        }
+        .reg-fi-input-s input{
+            width: 160px;
+            height: 30px;
             font-size: 14px;
-            line-height: 34px;
-            text-align: center;
-            background-color: #ff4c55;
+            line-height: 30px;
+            text-align: left;
+            text-indent: 10px;
+            color: #666;
+            border: none;
+        }
+        .reg-fi-button{
+            width: 95px;
+            height: 32px;
+            margin-left: 5px;
+            background-color: #ff757c;
+            font-size: 12px;
+            line-height: 32px;
             color: #ffffff;
             cursor: pointer;
         }
-        .baseinfo-mt-submit:hover{
-            background-color: #ec252f;
+        .reg-fi-button:hover{
+            background-color: #ff4c55;
+        }
+        .reg-fi-check{
+            float: left;
+            width: 300px;
+            height: 32px;
+            margin-left: 247px;
+        }
+        .checkbox{
+            float: left;
+            width: 14px;
+            height: 14px;
+            margin-top: 10px;
+        }
+        .checkbox-msg{
+            width: 270px;
+            height: 32px;
+            margin-left: 10px;
+            font-size: 12px;
+            line-height: 32px;
+            color: #666666;
+        }
+        .checkbox-msg span{
+            color: #0090ff;
+        }
+        .rfrb-btn{
+            float: left;
+            width: 260px;
+            height: 32px;
+            margin-left: 247px;
+            background-color: #ff757c;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 32px;
+            color: #ffffff;
+        }
+        .rfrb-btn:hover{
+            background-color: #ff4c55;
         }
     </style>
 </head>
@@ -215,8 +225,8 @@
             </div>
             <div class="fr menu">
                 <ul>
-                    <a href="#" class="af">首页</a>
-                    <a href="#">我要贴现</a>
+                    <a href="#">首页</a>
+                    <a href="#" class="af">我要贴现</a>
                     <a href="#">我要收票</a>
                     <a href="#">我的账号</a>
                     <a href="#">帮助中心</a>
@@ -231,59 +241,46 @@
         <div class="reg-top-login">已有账号,<span>立即登录</span></div>
     </div>
     <div class="reg-main">
-        <div class="reg-mtm">1.填写基本信息</div>
-        <div class="reg-mtm-ld"></div>
-        <div class="reg-mtm reg-mtm-red reg-mtm-whitetext">
+        <div class="reg-mtm reg-mtm-red reg-mtm-whitetext">1.填写基本信息</div>
+        <div class="reg-mtm-ld reg-mtm-redborder"></div>
+        <div class="reg-mtm">
             2.注册信息完善 <div class="reg-mtm-ild"></div>
         </div>
-        <div class="reg-mtm-ld reg-mtm-redborder"></div>
+        <div class="reg-mtm-ld"></div>
         <div class="reg-mtm">
             3.注册成功 <div class="reg-mtm-ild"></div>
         </div>
     </div>
-    <div class="reg-fillinfo">
-            <div class="baseinfo-mt-rows">
-                <div class="fl tar baseinfo-mt-mri">企业名称<span>*</span></div>
-                <input type="text" value="中顺易股份有限公司">
-                <div class="baseinfo-mt-mralert"></div>
-                <div class="baseinfo-mt-mrmsg">填写正确的企业名称有利于增加客户信任感</div>
+    <div class="reg-fill-info">
+        <div class="reg-fi-rows">
+            <div class="reg-fi-title">姓名<span>*</span></div>
+            <div class="reg-fi-input">
+                <input type="text"/>
             </div>
-            <div class="baseinfo-mt-rows">
-                <div class="fl tar baseinfo-mt-mri">营业牌照号<span>*</span></div>
-                <input type="text" value="12312312312312">
-                <div class="baseinfo-mt-mralert"></div>
-                <div class="baseinfo-mt-mrmsg">请输入营业执照号码</div>
+        </div>
+        <div class="reg-fi-rows">
+            <div class="reg-fi-title">手机号码<span>*</span></div>
+            <div class="reg-fi-input-s">
+                <input type="text"/>
             </div>
-            <div class="baseinfo-mt-rows">
-                <div class="fl tar baseinfo-mt-mri">组织机构代码<span>*</span></div>
-                <input type="text" value="12312313123">
-                <div class="baseinfo-mt-mralert"></div>
-                <div class="baseinfo-mt-mrmsg">请输入组织机构代码</div>
+            <div class="fl tac reg-fi-button">获取验证码</div>
+        </div>
+        <div class="reg-fi-rows">
+            <div class="reg-fi-title">短信验证码<span>*</span></div>
+            <div class="reg-fi-input">
+                <input type="text"/>
             </div>
-            <div class="baseinfo-mt-rows special-mt-rows">
-                <div class="fl tar baseinfo-mt-mri special-mrlh">企业名称<span>*</span></div>
-                <div class="fl baseinfo-mt-pict">执照影像</div>
+
+        </div>
+        <div class="reg-fi-rows">
+            <div class="reg-fi-check">
+                <input class="checkbox" type="checkbox">
+                <div class="fl tal checkbox-msg">我已阅读并同意<span>《中顺易用户注册协议》</span></div>
             </div>
-            <div class="baseinfo-mt-rows">
-                <div class="fl tar baseinfo-mt-mri">所属城市<span>*</span></div>
-                <div class="select-sheng">
-                    <select class="select-sheng-s">
-                        <option value ="1">江苏省</option>
-                        <option value ="2">上海市</option>
-                        <option value="3">广东省</option>
-                    </select>
-                </div>
-                <div class="select-sheng">
-                    <select class="select-sheng-s">
-                        <option value ="1">南京市</option>
-                        <option value ="2">深圳</option>
-                        <option value="3">东莞</option>
-                    </select>
-                </div>
-            </div>
-            <div class="baseinfo-mt-bbb">
-                <div class="baseinfo-mt-submit">确认修改</div>
-            </div>
+        </div>
+        <div class="reg-fi-rows-b">
+            <div class="tac rfrb-btn">登录</div>
+        </div>
     </div>
 </div>
 <div class="buttom">
