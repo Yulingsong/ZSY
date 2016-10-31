@@ -2,133 +2,222 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <script src="../js/jquery.js"></script>
+    <title>login</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <style type="text/css">
+        .login-nav{
+            width: 100%;
+            height: 40px;
+            background-color: #f2f2f2;
+        }
+        .login-nav-content{
+            width: 1100px;
+            height: 40px;
+            margin: 0 auto;
+            /*background-color: lightblue;*/
+        }
+        .ln-bm-image{
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            background: url("../images/home.png")no-repeat center center;
+            /*background-color: lightgreen;*/
+        }
+        .ln-bm{
+            width: 42px;
+            height: 40px;
+            margin-left: 10px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #666666;
+            /*background-color: lightcoral;*/
+            cursor: pointer;
+        }
+        .login-nav-phone{
+            width: 190px;
+            height: 40px;
+            margin-left: 24px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #666666;
+            /*background-color: lavender;*/
+        }
+        .login-help{
+            width: 90px;
+            height: 40px;
+            margin-right: 24px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #666666;
+            cursor: pointer;
+        }
+        .login-content{
+            width: 100%;
+            height: 608px;
+            top: 40px;
+            left: 0;
+            background-color: lightblue;
+            background: url("../images/banner.jpg")no-repeat center center;
+        }
+        .login-content-main{
+            width: 1100px;
+            height: 600px;
+            margin: 0 auto;
+            /*background-color: lightcoral;*/
+        }
+        .login-account{
+            float: left;
+            width: 520px;
+            height: 354px;
+            margin: 0 auto;
+            margin-top: 134px;
+            margin-left: 290px;
+            background-color: #fff;
+        }
+        .login-account-title{
+            width: 500px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 14px;
+            font-size: 26px;
+            line-height: 40px;
+            color: #ff4c55;
+            /*background-color: lightcoral;*/
+        }
+        .login-content-rows{
+            width: 500px;
+            height: 34px;
+            margin: 0 auto;
+            margin-top: 12px;
+            /*background-color: lightblue;*/
+        }
+        .login-content-rowinner{
+            width: 312px;
+            height: 32px;
+            margin: 0 auto;
+            border: 1px solid #dddddd;
+            /*background-color: lightgreen;*/
+        }
+        .login-content-imageo{
+            width: 32px;
+            height: 32px;
+            background: url("../images/login-account.png")no-repeat center center;
+        }
+        .login-content-imaget{
+            width: 32px;
+            height: 32px;
+            background: url("../images/login-password.png")no-repeat center center;
+        }
+        .login-content-imageth{
+            width: 32px;
+            height: 32px;
+            background: url("../images/login-identifying-code.png")no-repeat center center;
+        }
+        .login-content-input{
+            width: 200px;
+            height: 32px;
+            /*margin-left: 3px;*/
+            border: none;
+            border-left: 1px solid #dddddd;
+            text-indent: 15px;
+            font-size: 12px;
+            color: #999999;
+        }
+        .lci-rb{
+            border-right: 1px solid #dddddd;
+        }
+        .vcode-image{
+            width: 68px;
+            height: 32px;
+            text-align: right;
+            font-size: 12px;
+            line-height: 32px;
+            color: #dddddd;
+            /*background: lightblue;*/
+        }
+        .login-forget-pwd{
+            width: 312px;
+            height: 32px;
+            margin: 0 auto;
+        }
+        .lfp-inner{
+            width: 70px;
+            height: 32px;
+            font-size: 12px;
+            line-height: 32px;
+            border: none;
+            color: #0090ff;
+            cursor: pointer;
+        }
+        .login-btn{
+            width: 314px;
+            height: 32px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 32px;
+            color: #fff;
+            background-color: #ff4c55;
+        }
+        .login-btn:hover{
+            background-color: #ec252f;
+        }
+        .lfp-register{
+            width: 150px;
+            height: 32px;
+            font-size: 12px;
+            line-height: 32px;
+            color: #666;
+        }
+        .lfp-register span{
+            color: #0090ff;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<div class="nav">
-    <div class="top-nav-up">
-        <div class="top-nav-inner">
-            <div class="fl tal inner-phone">客服电话:400-8888-888</div>
-            <div class="fl tal inner-tradetime">交易时间:上午8:00-下午16:30(工作日)</div>
-            <div class="fr tar inner-unlogin">
-                <a href="#" class="an tal">帮助中心</a>
-                <a href="#" class="an">登录</a>
-                <a href="#" class="an tar">免费注册</a>
-            </div>
+<div class="page">
+    <div class="login-nav">
+        <div class="login-nav-content">
+            <div class="fl ln-bm-image"></div>
+            <div class="fl ln-bm">回首页</div>
+            <div class="fl tal login-nav-phone">客服电话 : 400-8888-888</div>
+            <div class="fr tac login-help">帮助中心</div>
         </div>
     </div>
-    <div class="top-nav-down">
-        <div class="top-nav-inner2">
-            <div class="fl tac nav-logo">
-                <img src="../images/LOGO(1).png">
-            </div>
-            <div>
-
-            </div>
-
-
-            <div class="fr menu">
-                <ul>
-                    <a href="#" class="af">首页</a>
-                    <a href="#">我要贴现</a>
-                    <a href="#">我要收票</a>
-                    <a href="#">我的账号</a>
-                    <a href="#">关于我们</a>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="content">
-    <div class="fr login">
-     <div class="fl account">账号登录</div>
-        <div class="fr no-account">还没有账号？<a href="#" class="register">立即注册</a></div>
-        <div class="input-box fr input-account">
-
-            <div class="fr inline">
-                <input  type="text" class="input-t " placeholder="请输入账户名">
-            </div>
-            <div class="input-img inline fr">
-                <img class="input-img-o" src="../images/account.png">
+    <div class="login-content">
+        <div class="login-content-main">
+            <div class="login-account">
+                <div class="tac login-account-title">账户登录</div>
+                <div class="login-content-rows">
+                    <div class="login-content-rowinner">
+                        <div class="fl login-content-imageo"></div>
+                        <input type="text" class="fl login-content-input" placeholder="请输入账户名"/>
+                    </div>
+                </div>
+                <div class="login-content-rows">
+                    <div class="login-content-rowinner">
+                        <div class="fl login-content-imaget"></div>
+                        <input type="text" class="fl login-content-input" placeholder="请输入密码"/>
+                    </div>
+                </div>
+                <div class="login-content-rows">
+                    <div class="login-content-rowinner">
+                        <div class="fl login-content-imageth"></div>
+                        <input type="text" class="fl login-content-input lci-rb" placeholder="请输入短信验证码"/>
+                        <div class="fl vcode-image">图片验证码</div>
+                    </div>
+                </div>
+                <div class="login-forget-pwd">
+                    <div class="fr tac lfp-inner">忘记密码?</div>
+                </div>
+                <div class="tac login-btn">登录</div>
+                <div class="login-forget-pwd">
+                    <div class="fr tar lfp-register">还没有账号?<span>立即注册</span></div>
+                </div>
             </div>
         </div>
-        <div class="input-box fr input-account">
 
-            <div class="box inline fr ">
-                <input  type="text" class="input-t " placeholder="请输入密码">
-            </div>
-            <div class="input-img inline fr">
-                <img class="input-img-o" src="../images/password.png">
-            </div>
-        </div>
-        <div class="input-box fr input-account">
-
-            <div class="fr inline">
-                <input  type="text" class="input-t " placeholder="请输入验证码">
-            </div>
-            <div class="input-img inline fr">
-                <img class="input-img-o" src="../images/identifying-code.png">
-            </div>
-        </div>
-        <div class="fpwd fr"><a href="#" class="f-password">忘记密码？</a></div>
-        <div class="login-button fl">button</div>
-    </div>
-
-
-</div>
-
-<div class="buttom">
-    <div class="buttom-inner">
-        <div class="fl buttom-l">
-            <div class="fr buttom-menu">
-                <img src="../images/security.png">
-                <ul>
-                    <a href="#" class="bm-l-title">安全保障</a>
-                    <a href="#">会员资质</a>
-                    <a href="#">资金安全</a>
-                    <a href="#">交易安全</a>
-                    <a href="#">网络安全</a>
-                </ul>
-            </div>
-            <div class="fr buttom-menu">
-                <img src="../images/help.png">
-                <ul>
-                    <a href="#" class="bm-l-title">帮助中心</a>
-                    <a href="#">我是卖方</a>
-                    <a href="#">我是买方</a>
-                    <a href="#">常用知识</a>
-                </ul>
-            </div>
-            <div class="fr buttom-menu">
-                <img src="../images/info.png">
-                <ul>
-                    <a href="#" class="bm-l-title">关于我们</a>
-                    <a href="#">关于中顺易</a>
-                    <a href="#">联系我们</a>
-                    <a href="#">网站公告</a>
-                </ul>
-            </div>
-        </div>
-        <div class="fr buttom-r">
-            <div class="fl buttom-menu-ro">
-                <img src="../images/phone.png">
-                <ul>
-                    <a href="" class="bm-r-title">客服电话:</a>
-                    <a href="">400-8888-888</a>
-                </ul>
-            </div>
-            <div class="fl buttom-menu-rt">
-                <img src="../images/time.png">
-                <ul>
-                    <a href="" class="bm-r-title">交易时间:</a>
-                    <a href="">上午8:00-下午16:30(工作日)</a>
-                </ul>
-            </div>
-        </div>
     </div>
 </div>
 </body>
