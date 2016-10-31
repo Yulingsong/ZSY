@@ -71,7 +71,7 @@
                             index++;
                         }
                         change.call(that, index, old);
-                    }, 2000);
+                    }, 5000);
                 }
             }
             // 修正box
