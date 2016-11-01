@@ -259,7 +259,7 @@ table {
     background-color: #eaeaea;
 }
 .buttom-inner{
-    width: 100%;
+    width: 1100px;
     height: 270px;
     margin: 0 auto;
     /*background-color: orange;*/
@@ -268,6 +268,7 @@ table {
     width: 599px;
     height: 210px;
     margin-top: 26px;
+    /*margin-left: 100px;*/
     /*background-color: orange;*/
     border-right: 1px solid #ccc;
 }
@@ -275,7 +276,8 @@ table {
     width: 500px;
     height: 210px;
     margin-top: 26px;
-    /*background-color: lightcoral;*/
+    /*margin-right: 100px;*/
+    /*background-color: orange;*/
 }
 .buttom-menu{
     width: 70px;
@@ -302,6 +304,7 @@ table {
     width: 102px;
     height: 158px;
     margin-left: 94px;
+    /*background-color: lightblue;*/
 }
 .buttom-menu-ro img{
     margin-left: 5px;
