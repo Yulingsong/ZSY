@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="css/slide.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/slide.js"></script>
+    <script type="text/javascript" src="js/superslide.2.1.js"></script>
     <style>
+
+        /** {*/
+            /*margin:0;*/
+            /*padding:0;*/
+            /*list-style:none;*/
+        /*}*/
+        /*body {*/
+            /*background:#fff;*/
+            /*font:normal 12px/22px 宋体;*/
+            /*width:100%;*/
+        /*}*/
+        /*img {*/
+            /*border:0;*/
+        /*}*/
+        /*a {*/
+            /*text-decoration:none;*/
+            /*color:#333;*/
+        /*}*/
+        /*a:hover {*/
+            /*color:#1974A1;*/
+        /*}*/
+
         .box {
             width: 46px;
             height: 100px;
@@ -23,9 +46,80 @@
         }
         .main-banner{
             width: 100%;
-            height: 380px;
+            height: 500px;
+            position:relative;
             background-color: lightblue;
         }
+        .main-banner .bd {
+            margin:0 auto;
+            position:relative;
+            z-index:0;
+            overflow:hidden;
+        }
+        .main-banner .bd ul {
+            width:100% !important;
+        }
+        .main-banner .bd li {
+            width:100% !important;
+            height:500px;
+            overflow:hidden;
+            text-align:center;
+        }
+        .main-banner .bd li a {
+            display:block;
+            height:500px;
+        }
+        .main-banner .hd {
+            width:100%;
+            position:absolute;
+            z-index:1;
+            bottom:0;
+            left:0;
+            height:30px;
+            line-height:30px;
+        }
+        .main-banner .hd ul {
+            text-align:center;
+        }
+        .main-banner .hd ul li {
+            cursor:pointer;
+            display:inline-block;
+            *display:inline;
+            zoom:1;
+            width:42px;
+            height:11px;
+            margin:1px;
+            overflow:hidden;
+            background:#000;
+            filter:alpha(opacity=50);
+            opacity:0.5;
+            line-height:999px;
+        }
+        .main-banner .hd ul .on {
+            background:#f00;
+        }
+        .main-banner .prev,.main-banner .next {
+            display:block;
+            position:absolute;
+            z-index:1;
+            top:50%;
+            margin-top:-30px;
+            left:15%;
+            z-index:1;
+            width:40px;
+            height:60px;
+            background:url(images/slider-arrow.png) -126px -137px #000 no-repeat;
+            cursor:pointer;
+            filter:alpha(opacity=50);
+            opacity:0.5;
+            display:none;
+        }
+        .main-banner .next {
+            left:auto;
+            right:15%;
+            background-position:-6px -137px;
+        }
+
         .calc {
             padding-top: 4px;
             width: 100%;
@@ -111,7 +205,6 @@
             margin: 0 auto;
             margin-top: 35px;
             background: url("images/flow.png")no-repeat center center;
-            /*background-color: lightblue;*/
         }
     </style>
 </head>
@@ -153,34 +246,20 @@
         </div>
     </div>
 </div>
+
 <div class="main-banner">
-    <div class="ck-slide">
-        <ul class="ck-slide-wrapper">
-            <li>
-                <a href="#"><img src="images/banner1.jpg" alt="" style="width: 100%;height: 380px;"></a>
-            </li>
-            <li style="display:none">
-                <a href="#"><img src="images/banner2.jpg" alt="" style="width: 100%;height: 380px"></a>
-            </li>
-            <li style="display:none">
-                <a href="#"><img src="images/banner3.jpg" alt="" style="width: 100%;height: 380px"></a>
-            </li>
-
+    <div class="bd">
+        <ul>
+            <li _src="url(images/banner1.jpg)" style="background:lightblue center 0 no-repeat;"><a href="#"></a></li>
+            <li _src="url(images/banner2.jpg)" style="background:lightcoral center 0 no-repeat;"><a href="#"></a></li>
+            <li _src="url(images/banner3.jpg)" style="background:lightcyan center 0 no-repeat;"><a href="#"></a></li>
         </ul>
-        <a href="#" class="ctrl-slide ck-prev">上一张</a>
-        <a href="#" class="ctrl-slide ck-next">下一张</a>
-        <div class="ck-slidebox">
-            <div class="slideWrap">
-                <ul class="dot-wrap">
-                    <li class="current"><em>1</em></li>
-                    <li><em>2</em></li>
-                    <li><em>3</em></li>
-
-                </ul>
-            </div>
-        </div>
     </div>
+    <div class="hd"><ul></ul></div>
+    <span class="prev"></span>
+    <span class="next"></span>
 </div>
+
 <div class="main-downban">
     <div class="main-inner-c">
         <div class="fl main-announcement"><span>网站公告&nbsp:&nbsp</span>2016国庆节放假&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2016-09-30</div>
@@ -266,10 +345,28 @@
 </div>
 
 <script>
-    $('.ck-slide').ckSlide({
-        autoPlay:true
-        /*dir:"x"*/
+
+    $(".main-banner").hover(function(){
+                $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+            },
+            function(){
+                $(this).find(".prev,.next").fadeOut()
+            });
+    $(".main-banner").slide({
+        titCell: ".hd ul",
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        autoPage: true,
+        trigger: "click",
+        startFun: function(i) {
+            var curLi = jQuery(".main-banner .bd li").eq(i);
+            if ( !! curLi.attr("_src")) {
+                curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+            }
+        }
     });
+
 </script>
 </body>
 </html>
